@@ -7,9 +7,18 @@ export const IntermediateBarWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 15px 90px;
+    position: relative;
 
     img {
         width: 200px;
+    }
+
+    @media(max-width: 991px) {
+        padding-left: 20px;
+
+        img {
+            width: 130px;
+        }
     }
 `;
 
@@ -57,6 +66,10 @@ export const ButtonsContainer = styled.div`
             text-decoration: none;
         }
     }
+
+    @media(max-width: 991px) {
+        display: none;
+    }
 `;
 
 export const Title = styled.h5`
@@ -94,9 +107,26 @@ export const Form = styled.form`
         margin: 10px auto 0;
         width: 120px;
         padding: 5px 0;
-        
+
         &:hover {
             background: #457720;
         }
     }
 `;
+
+export const MobileMenu = styled.div`
+    display: none;
+
+    @media(max-width: 991px) {
+        display: block;
+
+        .fa-bars {
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+    }
+`;
+

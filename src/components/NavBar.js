@@ -8,7 +8,7 @@ const NavBar = () => {
 
     return(
         <NavBarWrapper>
-            <ClockContainer className="col-2">
+            <ClockContainer className="col-5 col-lg-2 ">
                 <Clock>
                     <FontAwesomeIcon icon={faClock} />
                 </Clock>
@@ -16,7 +16,7 @@ const NavBar = () => {
                 <Time>{useCurrentTime()}</Time>
             </ClockContainer>
 
-            <Nav className="col-8">
+            <Nav className="col-2 col-lg-8">
                 <UnorderedList>
                     <ListItem>начало</ListItem>
 
@@ -39,7 +39,7 @@ const NavBar = () => {
                 </UnorderedList>
             </Nav>
 
-            <LanguagesContainer className="col-2">
+            <LanguagesContainer className="col-5 col-lg-2">
                 <LanguageContainer>
                     <span>BG</span>
                 </LanguageContainer>

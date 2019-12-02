@@ -35,6 +35,10 @@ export const UnorderedList = styled.div`
     justify-content: center;
     height: 100%;
     margin-bottom: 0;
+
+    @media(max-width: 991px) {
+        display: none;
+    }
 `;
 
 export const ListItem = styled.li`
@@ -58,6 +62,7 @@ export const ListItem = styled.li`
         &:hover ul {
             display: block;
             cursor: pointer;
+            z-index: 1000;
         }
     }
     

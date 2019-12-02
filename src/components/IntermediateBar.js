@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { IntermediateBarWrapper, ButtonsContainer, Title, Form } from '../styles/IntermediateBar';
+import { IntermediateBarWrapper, ButtonsContainer, Title, Form, MobileMenu } from '../styles/IntermediateBar';
 import Modal from 'react-bootstrap/Modal'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const IntermediateBar = () => {
 
@@ -25,15 +27,20 @@ const IntermediateBar = () => {
                         <Form>
                             <input type="text" placeholder="Потребител" />
 
-                            <input type="password" placeholder="Парола" />
+                            <input type="password" placeholder="Потребител" />
 
-                            <button>вход</button>
+                            <button>Вход</button>
                         </Form>
                     </Modal.Body>
                 </Modal>
 
                 <a href="#">регистрация</a>
             </ButtonsContainer>
+
+            <MobileMenu>
+                <FontAwesomeIcon icon={faBars} />
+                
+            </MobileMenu>
         </IntermediateBarWrapper>
     )
 };
