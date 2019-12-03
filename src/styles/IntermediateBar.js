@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const IntermediateBarWrapper = styled.div`
     background: linear-gradient(to top, #840000, #cc2027);
     display: flex;
@@ -8,7 +7,8 @@ export const IntermediateBarWrapper = styled.div`
     align-items: center;
     padding: 15px 90px;
     position: relative;
-
+    height: 100%;
+    
     img {
         width: 200px;
     }
@@ -18,6 +18,10 @@ export const IntermediateBarWrapper = styled.div`
 
         img {
             width: 130px;
+        }
+
+        &.active {
+            background: #cc2027;
         }
     }
 `;
@@ -46,7 +50,7 @@ export const ButtonsContainer = styled.div`
         transition: all .2s linear;
 
         &:hover {
-             background-color: #457720;
+            background-color: #457720;
             box-shadow: 2.5px 1.7px 0 0 rgba(0, 0, 0, 0.5)!important;
         }
     }
@@ -120,12 +124,84 @@ export const MobileMenu = styled.div`
     @media(max-width: 991px) {
         display: block;
 
-        .fa-bars {
+        .fa-bars,
+        .fa-times {
             color: white;
-            font-size: 25px;
             position: absolute;
-            top: 20px;
             right: 30px;
+            transition: all .1s linear;
+        }
+
+        .fa-bars {
+            top: 20px;
+            opacity: 1;
+            font-size: 25px;
+        }
+        
+        .fa-times {
+            top: 18px;
+            font-size: 30px;
+            opacity: 0;
+        }
+
+        .active .fa-times {
+            opacity: 1;
+        }
+
+        .active .fa-bars {
+            opacity: 0;
+        }
+
+        ul {
+            display: none;
+        }
+
+        .active ul {
+            background: linear-gradient(to top, #840000, #cc2027);
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+
+            li {
+                padding: 10px 15px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+                position: relative;
+
+                .fa-sort-down {
+                    position: absolute;
+                    color: white;
+                    top: 12px;
+                    margin-left: 4px;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                }
+
+                &:nth-of-type(4) ul{
+                    display: none;
+                    position: absolute;
+                    width: 50%;
+                    min-width: 250px;
+                    max-width: 250px;
+                    top: 40px
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 1000;
+                    background: white;
+                    font-size: 14px;
+                }
+
+                &.active ul{
+                    display: block;
+                    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.13);
+                }
+            }
         }
     }
 `;

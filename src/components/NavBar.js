@@ -2,7 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { useCurrentTime } from '../helpers/useHooks';
-import { NavBarWrapper, ClockContainer, Clock, Time, Nav, UnorderedList, ListItem, LanguagesContainer, LanguageContainer } from '../styles/NavBar';
+import { NavBarWrapper, ClockContainer, Clock, Time, Nav, UnorderedList, SubUnorderedList, ListItem, LanguagesContainer, LanguageContainer } from '../styles/NavBar';
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
@@ -18,23 +19,42 @@ const NavBar = () => {
 
             <Nav className="col-2 col-lg-8">
                 <UnorderedList>
-                    <ListItem>начало</ListItem>
-
-                    <ListItem>новини</ListItem>
-                    
-                    <ListItem>за нас</ListItem>
-
-                    <ListItem>информация
-                        <FontAwesomeIcon icon={faSortDown} className="icon" />
-
-                        <ul>
-                            <li>правила и условия</li>
-                            <li>комисионна</li>
-                            <li>често задавани въпроси</li>
-                            <li>отговорно залагане</li>
-                        </ul>
+                    <ListItem>
+                        <Link to="#">начало</Link>
                     </ListItem>
 
+                    <ListItem>
+                        <Link to="#">новини</Link>
+                    </ListItem>
+                    
+                    <ListItem>
+                        <Link to="#">за нас</Link>
+                    </ListItem>
+
+                    <ListItem>
+                        <Link to="#">информация</Link>
+                        
+                        <FontAwesomeIcon icon={faSortDown} className="icon" />
+
+                        <SubUnorderedList>
+                            <li>
+                                <Link to="#">правила и условия</Link>
+                            </li>
+
+                            <li>
+                                <Link to="#">комисионна</Link>
+                            </li>
+
+                            <li>
+                                <Link to="#">често задавани въпроси</Link>
+                            </li>
+
+                            <li>
+                                <Link to="#">отговорно залагане</Link>
+                            </li>
+                        </SubUnorderedList>
+                    </ListItem>
+                    
                     <ListItem>контакти</ListItem>
                 </UnorderedList>
             </Nav>
