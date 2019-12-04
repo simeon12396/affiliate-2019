@@ -177,13 +177,14 @@ export const MobileMenu = styled.div`
                     top: 12px;
                     margin-left: 4px;
                 }
+                
                 a {
                     text-decoration: none;
                     color: white;
                     font-size: 14px;
                 }
 
-                &:nth-of-type(4) ul{
+                &:nth-of-type(4) ul {
                     display: none;
                     position: absolute;
                     width: 50%;
@@ -197,7 +198,7 @@ export const MobileMenu = styled.div`
                     font-size: 14px;
                 }
 
-                &.active ul{
+                &.active ul {
                     display: block;
                     box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.13);
                 }

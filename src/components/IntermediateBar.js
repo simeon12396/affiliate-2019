@@ -47,43 +47,45 @@ const IntermediateBar = () => {
                 </div>
 
                 <div className="ul-container">
-                    <ul>
-                        <li>
-                            <Link to="#">начало</Link>
-                        </li>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="#">начало</Link>
+                            </li>
 
-                        <li>
-                            <Link to="#">новини</Link>
-                        </li>
+                            <li>
+                                <Link to="#">новини</Link>
+                            </li>
 
-                        <li>
-                            <Link to="#">за нас</Link>
-                        </li>
+                            <li>
+                                <Link to="#">за нас</Link>
+                            </li>
 
-                        <li onClick={handleToggleInformation} className="information-li">
-                            <Link to="#">информация</Link>
-                            <FontAwesomeIcon icon={faSortDown} className="icon" />
+                            <li onClick={handleToggleInformation} className="information-li">
+                                <Link to="#">информация</Link>
+                                <FontAwesomeIcon icon={faSortDown} className="icon" />
 
-                            <ul>
-                                <li>правила и условия</li>
-                                <li>комисионна</li>
-                                <li>често задавани въпроси</li>
-                                <li>отговорно залагане</li>
-                            </ul>
-                        </li>
+                                <ul>
+                                    <li>правила и условия</li>
+                                    <li>комисионна</li>
+                                    <li>често задавани въпроси</li>
+                                    <li>отговорно залагане</li>
+                                </ul>
+                            </li>
 
-                        <li>
-                            <Link to="#">контакти</Link>
-                        </li>
+                            <li>
+                                <Link to="#">контакти</Link>
+                            </li>
 
-                        <li>
-                            <Link to="#">регистрация</Link>
-                        </li>
+                            <li>
+                                <Link to="#">регистрация</Link>
+                            </li>
 
-                        <li onClick={handleShow}>
-                            <Link to="#">вход</Link>
-                        </li>
-                    </ul>
+                            <li onClick={handleShow}>
+                                <Link to="#">вход</Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 
                 <Modal show={show} onHide={handleClose}>

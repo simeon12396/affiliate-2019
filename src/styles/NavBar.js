@@ -34,7 +34,7 @@ export const Time = styled.div`
     }
 `;
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
 `;
 
 export const UnorderedList = styled.ul`

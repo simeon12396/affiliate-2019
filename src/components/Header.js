@@ -4,10 +4,11 @@ import IntermediateBar from './IntermediateBar';
 
 const Header = () => {
     return(
-        <div>
+        <header>
             <NavBar />
+            
             <IntermediateBar />
-        </div>
+        </header>
     );
 };
 
