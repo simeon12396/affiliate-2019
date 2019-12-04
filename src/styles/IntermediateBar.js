@@ -163,6 +163,7 @@ export const MobileMenu = styled.div`
             position: absolute;
             top: 60px;
             left: 0;
+            z-index: 1000;
 
             li {
                 padding: 10px 15px;
@@ -196,6 +197,10 @@ export const MobileMenu = styled.div`
                     z-index: 1000;
                     background: white;
                     font-size: 14px;
+
+                    a {
+                        color: black;
+                    }
                 }
 
                 &.active ul {

@@ -55,7 +55,9 @@ const NavBar = () => {
                         </SubUnorderedList>
                     </ListItem>
                     
-                    <ListItem>контакти</ListItem>
+                    <ListItem>
+                        <Link to="#">контакти</Link>
+                    </ListItem>
                 </UnorderedList>
             </Nav>
 

@@ -66,10 +66,18 @@ const IntermediateBar = () => {
                                 <FontAwesomeIcon icon={faSortDown} className="icon" />
 
                                 <ul>
-                                    <li>правила и условия</li>
-                                    <li>комисионна</li>
-                                    <li>често задавани въпроси</li>
-                                    <li>отговорно залагане</li>
+                                    <li>
+                                        <Link to="#">правила и условия</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="#">комисионна</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="#">често задавани въпроси</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="#">отговорно залагане</Link>
+                                    </li>
                                 </ul>
                             </li>
 

@@ -26,34 +26,34 @@ const UpperFooter = () => {
             </ButtonsContainer>
 
             <Information className="container">
-                <section>
+                <section className="col-sm-6 col-lg-3">
                     <h4>Winbet</h4>
 
-                    <Link>За нас</Link>
-                    <Link>Новини</Link>
-                    <Link>Игрален сайт</Link>
+                    <Link to="#">За нас</Link>
+                    <Link to="#">Новини</Link>
+                    <Link to="#">Игрален сайт</Link>
                 </section>
 
-                <section>
+                <section className="col-sm-6 col-lg-3">
                     <h4>Информация за партньори</h4>
 
-                    <Link>Правила и условия</Link>
-                    <Link>Комисионна</Link>
-                    <Link>Често задавани въпроси</Link>
-                    <Link>Отговорно залагане</Link>
+                    <Link to="#">Правила и условия</Link>
+                    <Link to="#">Комисионна</Link>
+                    <Link to="#">Често задавани въпроси</Link>
+                    <Link to="#">Отговорно залагане</Link>
                 </section>
 
-                <section>
+                <section className="col-sm-6 col-lg-3">
                     <h4>Обслужване на клиенти</h4>
 
-                    <Link>Бонуси и промоции</Link>
-                    <Link>Депозити и тегления</Link>
+                    <Link to="#">Бонуси и промоции</Link>
+                    <Link to="#">Депозити и тегления</Link>
                 </section>
 
-                <section>
+                <section className="col-sm-6 col-lg-3">
                     <h4>Контакти</h4>
 
-                    <Link>Контактна форма</Link>
+                    <Link to="#">Контактна форма</Link>
                 </section>
             </Information>
         </UpperFooterWrapper>

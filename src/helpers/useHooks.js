@@ -17,3 +17,17 @@ export const useCurrentTime = () => {
 
     return date.toLocaleTimeString();
 };
+
+export const usePartnersLogo = () => {
+    const [logos, setLogos] = useState([]);
+    const APIUrl = 'https://dev.winbet-bg.com/api/partners-logo';
+
+    useEffect(() => {
+        fetch(APIUrl)
+        .then(response => response.json())
+        .then(data => setLogos(data))
+
+    }, [])
+
+    return logos;
+};
