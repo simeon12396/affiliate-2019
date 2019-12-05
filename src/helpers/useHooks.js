@@ -18,16 +18,17 @@ export const useCurrentTime = () => {
     return date.toLocaleTimeString();
 };
 
-export const usePartnersLogo = () => {
-    const [logos, setLogos] = useState([]);
-    const APIUrl = 'https://dev.winbet-bg.com/api/partners-logo';
+export const useDataFromAPI = (url) => {
+    const [data, setData] = useState([]);
+    const [error, setError] = useState([]);
 
     useEffect(() => {
-        fetch(APIUrl)
+        fetch(url)
         .then(response => response.json())
-        .then(data => setLogos(data))
+        .then(data => setData(data))
+        .catch(error => setError(error));
 
     }, [])
 
-    return logos;
+    return data ? data : error;
 };

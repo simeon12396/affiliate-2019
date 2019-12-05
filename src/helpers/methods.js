@@ -15,15 +15,3 @@ export const handleToggleInformation = () => {
 
     informationListItem.classList.toggle('active');
 };
-
-export const displayPartnerLogos = (logos) => {
-    const APIUrl = 'https://dev.winbet-bg.com/uploads/images/partners_logo/';
-
-    logos.map((logo, index) => {
-        return(
-            <div key={index}>
-                <img src={`${APIUrl}${logo.img_name}`} />
-            </div>
-        )
-    });
-};

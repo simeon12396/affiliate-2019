@@ -1,11 +1,11 @@
 import React from 'react';
-import Slider from '../components/Slider';
+import SlickSlider from '../components/SlickSlider';
 
 const Home = () => {
     return(
-        <div>
-            <Slider />
-        </div>
+        <main>
+            <SlickSlider />
+        </main>
     );
 };
 

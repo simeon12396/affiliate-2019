@@ -1,9 +1,12 @@
 import React from 'react';
 import { LowerFooterWrapper, PaymentMethodsContainer, Title, OfficialPartnersContainer, Copyright } from '../styles/LowerFooter';
-import { usePartnersLogo } from '../helpers/useHooks';
+import { useDataFromAPI as usePartnersLogo } from '../helpers/useHooks';
 
 const LowerFooter = () => {
-    const partnerLogos = usePartnersLogo();
+    const apiURL = 'https://dev.winbet-bg.com/api/partners-logo';
+    const imageURL = 'https://dev.winbet-bg.com/uploads/images/partners_logo/';
+
+    let partnerLogos = usePartnersLogo(apiURL);
     
     return(
         <LowerFooterWrapper>
@@ -33,7 +36,7 @@ const LowerFooter = () => {
                         partnerLogos && partnerLogos.map((logo, index) => {
                             return(
                                <div key={index}>
-                                    <img src={`https://dev.winbet-bg.com/uploads/images/partners_logo/${logo.img_name}`} />
+                                    <img src={`${imageURL}${logo.img_name}`} />
                                </div>
                             )
                         })

@@ -36,7 +36,7 @@ const NavBar = () => {
                         
                         <FontAwesomeIcon icon={faSortDown} className="icon" />
 
-                        <SubUnorderedList>
+                        <SubUnorderedList className="sub-ul">
                             <li>
                                 <Link to="#">правила и условия</Link>
                             </li>

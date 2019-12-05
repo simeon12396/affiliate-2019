@@ -72,7 +72,7 @@ export const ListItem = styled.li`
         align-items: flex-start;
         position: relative;
 
-        &:hover ul {
+        &:hover .sub-ul {
             display: block;
             cursor: pointer;
             z-index: 1000;
