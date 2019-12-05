@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/SlickSlider';
 import { useDataFromAPI as useSliderImages } from '../helpers/useHooks';
-import { MainSliderWrapper, SlideContainer, SlideOverlay, ButtonsContainer, Button } from '../styles/SlickSlider';
+import { MainSliderWrapper, SlideContainer, SlideOverlay, ButtonsContainer, ButtonContainer, Button } from '../styles/SlickSlider';
 
 const SlickSlider = () => {
     const apiURL = 'https://dev.winbet-bg.com/api/bg/sliders';
@@ -18,7 +18,9 @@ const SlickSlider = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoPlay: true,
+        pauseOnHover: false
       };
 
     return(
@@ -55,16 +57,16 @@ const SlickSlider = () => {
                           </Button>
                         </ButtonsContainer>
                       ) : (
-                        <div>
+                        <ButtonContainer>
                           <Button left>
                             <a href={sliderData.button_1_bg_url} target="_blank">
                               {sliderData.button_text1_bg}
                             </a>
                           </Button>
-                        </div>
+                        </ButtonContainer>
                       )
                     }
-                    
+
                   </SlideOverlay>
                 </SlideContainer>
               )

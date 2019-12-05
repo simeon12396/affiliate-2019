@@ -14,7 +14,7 @@ export const IntermediateBarWrapper = styled.div`
     }
 
     @media(max-width: 991px) {
-        padding-left: 20px;
+        padding-left: 12px;
 
         img {
             width: 130px;
