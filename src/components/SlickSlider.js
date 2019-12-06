@@ -11,7 +11,7 @@ const SlickSlider = () => {
     const imageURL = 'https://dev.winbet-bg.com/uploads/images/sliders/';
 
     let sliderImages = useSliderImages(apiURL);
-    console.log(sliderImages)
+
     let sliderSettings = {
         dots: true,
         fade: true,
@@ -19,7 +19,7 @@ const SlickSlider = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoPlay: true,
+        autoplay: true,
         pauseOnHover: false
       };
 

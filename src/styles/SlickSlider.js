@@ -10,6 +10,7 @@ export const MainSliderWrapper = styled.section`
     .slick-slider {
         position: static;
     }
+    
     .slick-dots {
         bottom: 30px;
 

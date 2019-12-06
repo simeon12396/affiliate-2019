@@ -12,6 +12,8 @@ const IntermediateBar = () => {
     
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    
+    const registerUrl = 'https://affiliates.winbetaffiliates.bg/signup.php';
 
     return(
         <IntermediateBarWrapper className="intermediate-bar">
@@ -36,7 +38,7 @@ const IntermediateBar = () => {
                     </Modal.Body>
                 </Modal>
 
-                <a href="#">регистрация</a>
+                <a href={registerUrl} target="_blank" >регистрация</a>
             </ButtonsContainer>
 
             <MobileMenu>
@@ -86,11 +88,11 @@ const IntermediateBar = () => {
                             </li>
 
                             <li>
-                                <Link to="#">регистрация</Link>
+                                <a href={registerUrl} target="_blank">регистрация</a>
                             </li>
 
                             <li onClick={handleShow}>
-                                <Link to="#">вход</Link>
+                                <a href="#">вход</a>
                             </li>
                         </ul>
                     </nav>
