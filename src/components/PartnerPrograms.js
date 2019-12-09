@@ -1,5 +1,6 @@
 import React from 'react';
 import { PartnerProgramsWrapper, ServicesContainer } from '../styles/PartnerPrograms';
+import { HorizontalLine } from '../styles/common/HorizontalLine';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDollarSign, faThumbsUp, faHeadphones } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,7 +9,7 @@ const PartnerPrograms = () => {
         <PartnerProgramsWrapper className="container">
             <h2>Присъединете се към нашата партньорска програма!</h2>
 
-            <div className="red-line"></div>
+            <HorizontalLine red />
 
             <p>Разнообразни продукти и много възможности</p>
 

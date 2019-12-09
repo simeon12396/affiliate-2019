@@ -23,7 +23,7 @@ export const MainSliderWrapper = styled.section`
         }
 
         li {
-            margin: 0 1px;
+            margin: 0 0;
 
             button:before {
                 color: #fff;

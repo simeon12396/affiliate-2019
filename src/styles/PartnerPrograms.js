@@ -11,18 +11,23 @@ export const PartnerProgramsWrapper = styled.section`
         text-align: center;
     }
 
-    .red-line {
-        width: 88px;
-        height: 2px;
-        background-color: #c91f25;
-        margin: 0 auto 25px;
-    }
-
     p {
         font-size: 17px;
         color: #86878b;
         text-align: center;
         margin-bottom: 90px;
+    }
+
+    @media(max-width: 768px) {
+        padding-top: 50px;
+
+        h2 {
+            font-size: 32px;
+        }
+
+        p {
+            margin-bottom: 50px;
+        }
     }
 `;
 

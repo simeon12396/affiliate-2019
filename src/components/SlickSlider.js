@@ -12,7 +12,7 @@ const SlickSlider = () => {
 
     let sliderImages = useSliderImages(apiURL);
 
-    let sliderSettings = {
+    const sliderSettings = {
         dots: true,
         fade: true,
         infinite: true,
