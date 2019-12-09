@@ -9,6 +9,9 @@ export const NewsPanelWrapper = styled.section`
 
     h2 {
         margin-bottom: 25px;
+        font-size: 38px;
+        font-weight: bold;
+        color: #fff;
     }
 
     p {

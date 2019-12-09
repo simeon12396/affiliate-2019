@@ -55,7 +55,8 @@ export const CasinosContainer = styled.div`
     @media(max-width: 440px) {
         flex-direction: column;
         align-items: center;
-
+        margin-top: 10px;
+        
         div:nth-of-type(2) {
             margin-top: 5px;
             margin-bottom: 5px;
