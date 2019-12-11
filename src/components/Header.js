@@ -1,13 +1,12 @@
 import React from 'react';
-import NavBar from '../../components/NavBar'
-import IntermediateBar from '../../components/IntermediateBar'
+import NavBar from './NavBar';
+import IntermediateBar from './IntermediateBar';
 
 const Header = () => {
+    
     return(
         <header>
             <NavBar 
-                home='Начало' 
-                news='Новини'
             />
             
             <IntermediateBar />

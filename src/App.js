@@ -12,7 +12,6 @@ import AboutPageEn from './en/views/AboutPageEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
-import MainLayoutEn from './layouts/MainLayoutEn';
 
 /** CONTEXTS */
 import { languageContext } from './contexts/languageContext';
@@ -43,11 +42,11 @@ const App = () => {
 
               (
                 <Switch>
-                  <MainLayoutEn>
+                  <MainLayout>
                     <Route exact path="/:lng" component={HomeEn} />
 
                     <Route exact path="/:lng/about" component={AboutPageEn} />
-                  </MainLayoutEn>
+                  </MainLayout>
               </Switch>
               )
             }

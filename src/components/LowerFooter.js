@@ -2,7 +2,7 @@ import React from 'react';
 import { LowerFooterWrapper, PaymentMethodsContainer, Title, OfficialPartnersContainer, Copyright } from '../styles/LowerFooter';
 import { useDataFromAPI as usePartnersLogo } from '../helpers/useHooks';
 
-const LowerFooter = () => {
+const LowerFooter = (props) => {
     const apiURL = 'https://dev.winbet-bg.com/api/partners-logo';
     const imageURL = 'https://dev.winbet-bg.com/uploads/images/partners_logo/';
 

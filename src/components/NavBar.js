@@ -9,7 +9,7 @@ import { withRouter } from 'react-router-dom';
 
 const NavBar = (props) => {
  
-    const {handlerOnClickBg, handlerOnClickEn} = useContext(languageContext);
+    const { lng, handlerOnClickBg, handlerOnClickEn} = useContext(languageContext);
 
     return(
         <NavBarWrapper>
@@ -22,13 +22,61 @@ const NavBar = (props) => {
             </ClockContainer>
 
             <Nav className="col-2 col-lg-8">
-                <UnorderedList>
+                {
+                    (lng === 'bg') ?
+
+                    (
+                            <UnorderedList>
+                        <ListItem>
+                            <Link to="#">начало</Link>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link to="#">новини</Link>
+                        </ListItem>
+                        
+                        <ListItem>
+                            <Link to="#">за нас</Link>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link to="#">информация</Link>
+                            
+                            <FontAwesomeIcon icon={faSortDown} className="icon" />
+
+                            <SubUnorderedList className="sub-ul">
+                                <li>
+                                    <Link to="#">правила и условия</Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#">комисионна</Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#">често задавани въпроси</Link>
+                                </li>
+
+                                <li>
+                                    <Link to="#">отговорно залагане</Link>
+                                </li>
+                            </SubUnorderedList>
+                        </ListItem>
+                        
+                        <ListItem>
+                            <Link to="#">контакти</Link>
+                        </ListItem>
+                    </UnorderedList>
+                    ) : 
+                    
+                    (
+                        <UnorderedList>
                     <ListItem>
-                        <Link to="#">{props.home}</Link>
+                        <Link to="#">home</Link>
                     </ListItem>
 
                     <ListItem>
-                        <Link to="#">{props.news}</Link>
+                        <Link to="#">news</Link>
                     </ListItem>
                     
                     <ListItem>
@@ -63,6 +111,8 @@ const NavBar = (props) => {
                         <Link to="#">контакти</Link>
                     </ListItem>
                 </UnorderedList>
+                    )
+                }
             </Nav>
 
             <LanguagesContainer className="col-5 col-lg-2">
