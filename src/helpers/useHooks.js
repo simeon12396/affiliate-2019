@@ -32,3 +32,32 @@ export const useDataFromAPI = (url) => {
 
     return data ? data : error;
 };
+
+export const useChangeLanguage = () => {
+
+    const [lng, setLng] = useState('bg');
+
+    useEffect(() => {
+        const urlArray = window.location.href.split('/');
+
+        if(urlArray[3] === 'bg' || urlArray[3] === 'en') {
+            setLng(urlArray[3]);
+        }
+    }, []);
+
+    const handlerOnClickBg = (lngData) => {
+        let lngEndPoint = lngData.location.pathname;
+        lngEndPoint = '/bg';
+        setLng('bg');
+        lngData.push(lngEndPoint);
+    };
+
+    const handlerOnClickEn = (lngData) => {
+        let lngEndPoint = lngData.location.pathname;
+        lngEndPoint = '/en';
+        setLng('en');
+        lngData.push(lngEndPoint);
+    };
+
+    return [lng, handlerOnClickBg, handlerOnClickEn];
+};

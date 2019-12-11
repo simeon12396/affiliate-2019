@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../bg/components/Header';
-import Footer from '../bg/components/Footer';
+import Header from '../en/components/Header';
+import Footer from '../en/components/Footer';
 
-const MainLayout = (props) => {
+const MainLayoutEn = (props) => {
     return(
         <div>
             <Header />
@@ -12,4 +12,4 @@ const MainLayout = (props) => {
     );
 };
 
-export default MainLayout;
+export default MainLayoutEn;

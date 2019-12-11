@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IntermediateBarWrapper, ButtonsContainer, Title, Form, MobileMenu } from '../styles/IntermediateBar';
-import Modal from 'react-bootstrap/Modal'
+import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { handleToggleMenu, handleToggleInformation } from '../helpers/methods';

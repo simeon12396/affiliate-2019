@@ -1,6 +1,6 @@
 import React from 'react';
-import UpperFooter from './UpperFooter';
-import LowerFooter from './LowerFooter';
+import UpperFooter from '../../components/UpperFooter';
+import LowerFooter from '../../components/LowerFooter';
 
 const Footer = () => {
     return(

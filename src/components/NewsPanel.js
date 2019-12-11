@@ -23,7 +23,7 @@ const NewsPanel = () => {
       };
 
     return(
-        <NewsPanelWrapper>
+        <NewsPanelWrapper className="wrapper">
             <h2>Последни новини</h2>
 
             <HorizontalLine />

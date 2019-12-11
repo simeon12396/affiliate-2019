@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import banner from '../images/panel-bck.png';
 
 export const NewsPanelWrapper = styled.section`
-    background: gray;
+    background:url(${banner});
     color: white;
     text-align: center;
     padding: 30px 0 40px;

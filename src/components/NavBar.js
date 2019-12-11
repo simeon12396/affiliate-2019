@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { useCurrentTime } from '../helpers/useHooks';
 import { NavBarWrapper, ClockContainer, Clock, Time, Nav, UnorderedList, SubUnorderedList, ListItem, LanguagesContainer, LanguageContainer } from '../styles/NavBar';
 import { Link } from "react-router-dom";
+import { languageContext } from '../contexts/languageContext';
+import { withRouter } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = (props) => {
+ 
+    const {handlerOnClickBg, handlerOnClickEn} = useContext(languageContext);
 
     return(
         <NavBarWrapper>
@@ -20,11 +24,11 @@ const NavBar = () => {
             <Nav className="col-2 col-lg-8">
                 <UnorderedList>
                     <ListItem>
-                        <Link to="#">начало</Link>
+                        <Link to="#">{props.home}</Link>
                     </ListItem>
 
                     <ListItem>
-                        <Link to="#">новини</Link>
+                        <Link to="#">{props.news}</Link>
                     </ListItem>
                     
                     <ListItem>
@@ -62,11 +66,11 @@ const NavBar = () => {
             </Nav>
 
             <LanguagesContainer className="col-5 col-lg-2">
-                <LanguageContainer>
+                <LanguageContainer onClick={handlerOnClickBg.bind(this, props.history)}>
                     <span>BG</span>
                 </LanguageContainer>
 
-                <LanguageContainer>
+                <LanguageContainer onClick={handlerOnClickEn.bind(this, props.history)}>
                     <span>EN</span>
                 </LanguageContainer>
             </LanguagesContainer>
@@ -74,4 +78,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default withRouter(NavBar);
