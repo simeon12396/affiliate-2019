@@ -37,7 +37,7 @@ const NavBar = (props) => {
                     (
                         <UnorderedList>
                             <ListItem>
-                                <Link to="#">начало</Link>
+                                <Link to="/">начало</Link>
                             </ListItem>
 
                             <ListItem>
@@ -45,7 +45,7 @@ const NavBar = (props) => {
                             </ListItem>
                             
                             <ListItem>
-                                <Link to="#">за нас</Link>
+                                <Link to="/bg/about">за нас</Link>
                             </ListItem>
 
                             <ListItem>
@@ -81,7 +81,7 @@ const NavBar = (props) => {
                     (
                         <UnorderedList>
                             <ListItem>
-                                <Link to="#">home</Link>
+                                <Link to="/">home</Link>
                             </ListItem>
 
                             <ListItem>
@@ -89,7 +89,7 @@ const NavBar = (props) => {
                             </ListItem>
                             
                             <ListItem>
-                                <Link to="#">about us</Link>
+                                <Link to="/en/about">about us</Link>
                             </ListItem>
 
                             <ListItem>

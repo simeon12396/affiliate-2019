@@ -19,7 +19,7 @@ const SlickSlider = (props) => {
     const imageURL = 'https://dev.winbet-bg.com/uploads/images/sliders/';
 
     let slidersData = useSlidersData(props.slidersAPIUrl)
-
+    console.log(slidersData)
     const { lng } = useContext(languageContext);
   
     const sliderSettings = {
