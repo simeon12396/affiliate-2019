@@ -46,15 +46,13 @@ export const useChangeLanguage = () => {
     }, []);
 
     const handlerOnClickBg = (lngData) => {
-        let lngEndPoint = lngData.location.pathname;
-        lngEndPoint = '/bg';
+        const lngEndPoint = '/bg';
         setLng('bg');
         lngData.push(lngEndPoint);
     };
 
     const handlerOnClickEn = (lngData) => {
-        let lngEndPoint = lngData.location.pathname;
-        lngEndPoint = '/en';
+        const lngEndPoint = '/en';
         setLng('en');
         lngData.push(lngEndPoint);
     };

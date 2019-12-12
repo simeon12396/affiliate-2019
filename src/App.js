@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
+
+/** ROUTER */
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 /** BG VERSION */
@@ -29,15 +31,15 @@ const App = () => {
             { lng === 'bg' ?
             
               (
-              <Switch>
-                <MainLayout>
-                  <Route exact path="/" component={Home} />
+                <Switch>
+                  <MainLayout>
+                    <Route exact path="/" component={Home} />
 
-                  <Route exact path="/:lng" component={Home} />
+                    <Route exact path="/:lng" component={Home} />
 
-                  <Route exact path="/:lng/about" component={AboutPage} />
-                </MainLayout>
-              </Switch>
+                    <Route exact path="/:lng/about" component={AboutPage} />
+                  </MainLayout>
+                </Switch>
               ) :
 
               (
@@ -47,7 +49,7 @@ const App = () => {
 
                     <Route exact path="/:lng/about" component={AboutPageEn} />
                   </MainLayout>
-              </Switch>
+                </Switch>
               )
             }
           </Router>

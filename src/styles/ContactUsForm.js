@@ -64,7 +64,7 @@ export const ContactUsForm = styled.form`
             top: 100px;
         }
 
-        &-description {
+        &-message {
             top: 0px;
             right: 130px;
 

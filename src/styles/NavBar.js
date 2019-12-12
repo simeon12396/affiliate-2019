@@ -51,7 +51,7 @@ export const UnorderedList = styled.ul`
 
 export const ListItem = styled.li`
     margin-right: 5px;
-    padding: 9px 15px;
+    padding: 10px 15px;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     list-style: none;
@@ -137,7 +137,7 @@ export const LanguagesContainer = styled.div`
 `;
 
 export const LanguageContainer = styled.div`
-    background-color: #7b0005;
+    background-color: ${props => props.active ? '#cc2027' : '#7b0005'};
     height: 100%;
     display: flex;
     align-items: center;

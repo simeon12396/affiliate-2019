@@ -1,4 +1,6 @@
 import React from 'react';
+
+/** COMPONENTS */
 import SlickSlider from '../../components/SlickSlider';
 import CasinoContent from '../../components/CasinoContent';
 import PartnerPrograms from '../../components/PartnerPrograms';
@@ -8,16 +10,15 @@ import ContactUs from '../../components/ContactUs';
 const HomeEn = () => {
     return(
         <main>
-            {/* <SlickSlider />
+            <SlickSlider slidersAPIUrl='https://dev.winbet-bg.com/api/en/sliders' />
 
             <CasinoContent />
 
             <PartnerPrograms />
 
-            <NewsPanel />
+            <NewsPanel newsAPIUrl = 'https://dev.winbet-bg.com/api/en/news' />
 
-            <ContactUs /> */}
-            endsadsa
+            <ContactUs />
         </main>
     );
 };

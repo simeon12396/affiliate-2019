@@ -1,16 +1,25 @@
 import React, { useContext } from 'react';
+
+/** FONT AWESOME */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faSortDown } from "@fortawesome/free-solid-svg-icons";
+
+/** HOOKS */
 import { useCurrentTime } from '../helpers/useHooks';
+
+/** STYLED COMPONENTS */
 import { NavBarWrapper, ClockContainer, Clock, Time, Nav, UnorderedList, SubUnorderedList, ListItem, LanguagesContainer, LanguageContainer } from '../styles/NavBar';
-import { Link } from "react-router-dom";
+
+/** ROUTER */
+import { Link, withRouter } from "react-router-dom";
+
+/** CONTEXTS */
 import { languageContext } from '../contexts/languageContext';
-import { withRouter } from 'react-router-dom';
 
 const NavBar = (props) => {
  
     const { lng, handlerOnClickBg, handlerOnClickEn} = useContext(languageContext);
-
+    
     return(
         <NavBarWrapper>
             <ClockContainer className="col-5 col-lg-2 ">
@@ -26,103 +35,123 @@ const NavBar = (props) => {
                     (lng === 'bg') ?
 
                     (
-                            <UnorderedList>
-                        <ListItem>
-                            <Link to="#">начало</Link>
-                        </ListItem>
+                        <UnorderedList>
+                            <ListItem>
+                                <Link to="#">начало</Link>
+                            </ListItem>
 
-                        <ListItem>
-                            <Link to="#">новини</Link>
-                        </ListItem>
-                        
-                        <ListItem>
-                            <Link to="#">за нас</Link>
-                        </ListItem>
-
-                        <ListItem>
-                            <Link to="#">информация</Link>
+                            <ListItem>
+                                <Link to="#">новини</Link>
+                            </ListItem>
                             
-                            <FontAwesomeIcon icon={faSortDown} className="icon" />
+                            <ListItem>
+                                <Link to="#">за нас</Link>
+                            </ListItem>
 
-                            <SubUnorderedList className="sub-ul">
-                                <li>
-                                    <Link to="#">правила и условия</Link>
-                                </li>
+                            <ListItem>
+                                <Link to="#">информация</Link>
+                                
+                                <FontAwesomeIcon icon={faSortDown} className="icon" />
 
-                                <li>
-                                    <Link to="#">комисионна</Link>
-                                </li>
+                                <SubUnorderedList className="sub-ul">
+                                    <li>
+                                        <Link to="#">правила и условия</Link>
+                                    </li>
 
-                                <li>
-                                    <Link to="#">често задавани въпроси</Link>
-                                </li>
+                                    <li>
+                                        <Link to="#">комисионна</Link>
+                                    </li>
 
-                                <li>
-                                    <Link to="#">отговорно залагане</Link>
-                                </li>
-                            </SubUnorderedList>
-                        </ListItem>
-                        
-                        <ListItem>
-                            <Link to="#">контакти</Link>
-                        </ListItem>
-                    </UnorderedList>
+                                    <li>
+                                        <Link to="#">често задавани въпроси</Link>
+                                    </li>
+
+                                    <li>
+                                        <Link to="#">отговорно залагане</Link>
+                                    </li>
+                                </SubUnorderedList>
+                            </ListItem>
+                            
+                            <ListItem>
+                                <Link to="#">контакти</Link>
+                            </ListItem>
+                        </UnorderedList>
                     ) : 
                     
                     (
                         <UnorderedList>
-                    <ListItem>
-                        <Link to="#">home</Link>
-                    </ListItem>
+                            <ListItem>
+                                <Link to="#">home</Link>
+                            </ListItem>
 
-                    <ListItem>
-                        <Link to="#">news</Link>
-                    </ListItem>
-                    
-                    <ListItem>
-                        <Link to="#">за нас</Link>
-                    </ListItem>
+                            <ListItem>
+                                <Link to="#">news</Link>
+                            </ListItem>
+                            
+                            <ListItem>
+                                <Link to="#">about us</Link>
+                            </ListItem>
 
-                    <ListItem>
-                        <Link to="#">информация</Link>
-                        
-                        <FontAwesomeIcon icon={faSortDown} className="icon" />
+                            <ListItem>
+                                <Link to="#">information</Link>
+                                
+                                <FontAwesomeIcon icon={faSortDown} className="icon" />
 
-                        <SubUnorderedList className="sub-ul">
-                            <li>
-                                <Link to="#">правила и условия</Link>
-                            </li>
+                                <SubUnorderedList className="sub-ul">
+                                    <li>
+                                        <Link to="#">terms and conditions</Link>
+                                    </li>
 
-                            <li>
-                                <Link to="#">комисионна</Link>
-                            </li>
+                                    <li>
+                                        <Link to="#">commission plan</Link>
+                                    </li>
 
-                            <li>
-                                <Link to="#">често задавани въпроси</Link>
-                            </li>
+                                    <li>
+                                        <Link to="#">faq</Link>
+                                    </li>
 
-                            <li>
-                                <Link to="#">отговорно залагане</Link>
-                            </li>
-                        </SubUnorderedList>
-                    </ListItem>
-                    
-                    <ListItem>
-                        <Link to="#">контакти</Link>
-                    </ListItem>
-                </UnorderedList>
+                                    <li>
+                                        <Link to="#">responsible betting</Link>
+                                    </li>
+                                </SubUnorderedList>
+                            </ListItem>
+                            
+                            <ListItem>
+                                <Link to="#">contacts</Link>
+                            </ListItem>
+                        </UnorderedList>
                     )
                 }
             </Nav>
 
             <LanguagesContainer className="col-5 col-lg-2">
-                <LanguageContainer onClick={handlerOnClickBg.bind(this, props.history)}>
-                    <span>BG</span>
-                </LanguageContainer>
+                {
+                    ( lng === 'bg') ?
 
-                <LanguageContainer onClick={handlerOnClickEn.bind(this, props.history)}>
-                    <span>EN</span>
-                </LanguageContainer>
+                    (
+                        <>
+                            <LanguageContainer active onClick={handlerOnClickBg.bind(this, props.history)}>
+                                <span>BG</span>
+                            </LanguageContainer>
+
+                            <LanguageContainer onClick={handlerOnClickEn.bind(this, props.history)}>
+                                <span>EN</span>
+                            </LanguageContainer>
+                        </>
+                    ) :
+
+                    (
+                        <>
+                            <LanguageContainer onClick={handlerOnClickBg.bind(this, props.history)}>
+                                <span>BG</span>
+                            </LanguageContainer>
+
+                            <LanguageContainer active onClick={handlerOnClickEn.bind(this, props.history)}>
+                                <span>EN</span>
+                            </LanguageContainer>
+                        </>
+                    )
+                }
             </LanguagesContainer>
         </NavBarWrapper>
     );

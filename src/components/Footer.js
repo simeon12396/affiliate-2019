@@ -1,18 +1,17 @@
 import React from 'react';
+
+/** COMPONENTS */
 import UpperFooter from './UpperFooter';
 import LowerFooter from './LowerFooter';
-import { languageContext } from '../contexts/languageContext';
 
 const Footer = () => {
     
     return(
-
-                <footer>
-                    <UpperFooter />
+        <footer>
+            <UpperFooter />
                 
-                    <LowerFooter /> 
-                </footer>
-
+            <LowerFooter /> 
+        </footer>
     )
 };
 
