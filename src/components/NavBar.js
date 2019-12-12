@@ -81,7 +81,7 @@ const NavBar = (props) => {
                     (
                         <UnorderedList>
                             <ListItem>
-                                <Link to="/">home</Link>
+                                <Link to="/en">home</Link>
                             </ListItem>
 
                             <ListItem>

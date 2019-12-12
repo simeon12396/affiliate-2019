@@ -10,16 +10,20 @@ import { useDataFromAPI as useSlidersData } from '../helpers/useHooks';
 
 /** STYLED COMPONENTS */
 import { MainSliderWrapper, SlideContainer, SlideOverlay, ButtonsContainer, ButtonContainer, Button } from '../styles/SlickSlider';
+import { SpinnerWrapper } from '../styles/SpinnerWrapper';
 
 /** CONTEXTS */ 
 import { languageContext } from '../contexts/languageContext';
+
+/** REACT BOOTSTRAP */
+import Spinner from 'react-bootstrap/Spinner'
 
 const SlickSlider = (props) => {
 
     const imageURL = 'https://dev.winbet-bg.com/uploads/images/sliders/';
 
-    let slidersData = useSlidersData(props.slidersAPIUrl)
-    console.log(slidersData)
+    let [slidersData, loading] = useSlidersData(props.slidersAPIUrl)
+    
     const { lng } = useContext(languageContext);
   
     const sliderSettings = {
@@ -33,103 +37,112 @@ const SlickSlider = (props) => {
         pauseOnHover: false
       };
 
-    return(
-      <MainSliderWrapper>
-        <Slider {...sliderSettings}>
-          {
-            slidersData && slidersData.map((sliderData, index) => {
-              return(
-                <SlideContainer key={index}>
-                  <img src={`${imageURL}${sliderData.image_name}`} className="slide-bck" />
+      if(loading) {
+        return(
+          <SpinnerWrapper>
+            <Spinner animation="border" variant="danger" />
+          </SpinnerWrapper>
+        )
+      };
 
-                  <SlideOverlay>
-                    <img src={require('../images/slider-winbet-logo.png')} alt="Winbet Slider Logo" className="slide-logo" />
-
-                    {
-                      ( lng === 'bg' ) ? 
-
-                      (
-                        <>
-                          <h2 className="slide-title">{sliderData.title_bg}</h2>
-
-                          <div className="slide-line"></div>
-
-                          <p className="slide-description">{sliderData.description_bg}</p>
-
-                          {
-                            (sliderData.button_text2_bg) ? (
-                                <ButtonsContainer>
-                                  <Button left>
-                                    <a href={sliderData.button_1_bg_url} target="_blank">
-                                      {sliderData.button_text1_bg}
-                                    </a>
-                                  </Button>
-
-                                  <Button>
-                                    <a href={sliderData.button_2_bg_url} target="_blank">
-                                      {sliderData.button_text2_bg}
-                                    </a>
-                                  </Button>
-                                </ButtonsContainer>
-                              ) : (
-                                <ButtonContainer>
-                                  <Button left>
-                                    <a href={sliderData.button_1_bg_url} target="_blank">
-                                      {sliderData.button_text1_bg}
-                                    </a>
-                                  </Button>
-                                </ButtonContainer>
-                              )
-                            }
-                          </>  
-                        ) : 
-
+      return(
+        <MainSliderWrapper>
+  
+          <Slider {...sliderSettings}>
+            {
+              slidersData && slidersData.map((sliderData, index) => {
+                return(
+                  <SlideContainer key={index}>
+                    <img src={`${imageURL}${sliderData.image_name}`} className="slide-bck" />
+  
+                    <SlideOverlay>
+                      <img src={require('../images/slider-winbet-logo.png')} alt="Winbet Slider Logo" className="slide-logo" />
+  
+                      {
+                        ( lng === 'bg' ) ? 
+  
                         (
-
                           <>
-                            <h2 className="slide-title">{sliderData.title_en}</h2>
-
+                            <h2 className="slide-title">{sliderData.title_bg}</h2>
+  
                             <div className="slide-line"></div>
-
-                            <p className="slide-description">{sliderData.description_en}</p>
-
+  
+                            <p className="slide-description">{sliderData.description_bg}</p>
+  
                             {
-                              (sliderData.button_text2_en) ? (
+                              (sliderData.button_text2_bg) ? (
                                   <ButtonsContainer>
                                     <Button left>
-                                      <a href={sliderData.button_1_en_url} target="_blank">
-                                        {sliderData.button_text1_en}
+                                      <a href={sliderData.button_1_bg_url} target="_blank">
+                                        {sliderData.button_text1_bg}
                                       </a>
                                     </Button>
-
+  
                                     <Button>
-                                      <a href={sliderData.button_2_en_url} target="_blank">
-                                        {sliderData.button_text2_en}
+                                      <a href={sliderData.button_2_bg_url} target="_blank">
+                                        {sliderData.button_text2_bg}
                                       </a>
                                     </Button>
                                   </ButtonsContainer>
                                 ) : (
                                   <ButtonContainer>
                                     <Button left>
-                                      <a href={sliderData.button_1_en_url} target="_blank">
-                                        {sliderData.button_text1_en}
+                                      <a href={sliderData.button_1_bg_url} target="_blank">
+                                        {sliderData.button_text1_bg}
                                       </a>
                                     </Button>
                                   </ButtonContainer>
                                 )
                               }
-                          </> 
-                        )
-
-                    }
-                  </SlideOverlay>
-                </SlideContainer>
-              )
-            })
-          }
-        </Slider>
-      </MainSliderWrapper>
-    )
-};
+                            </>  
+                          ) : 
+  
+                          (
+  
+                            <>
+                              <h2 className="slide-title">{sliderData.title_en}</h2>
+  
+                              <div className="slide-line"></div>
+  
+                              <p className="slide-description">{sliderData.description_en}</p>
+  
+                              {
+                                (sliderData.button_text2_en) ? (
+                                    <ButtonsContainer>
+                                      <Button left>
+                                        <a href={sliderData.button_1_en_url} target="_blank">
+                                          {sliderData.button_text1_en}
+                                        </a>
+                                      </Button>
+  
+                                      <Button>
+                                        <a href={sliderData.button_2_en_url} target="_blank">
+                                          {sliderData.button_text2_en}
+                                        </a>
+                                      </Button>
+                                    </ButtonsContainer>
+                                  ) : (
+                                    <ButtonContainer>
+                                      <Button left>
+                                        <a href={sliderData.button_1_en_url} target="_blank">
+                                          {sliderData.button_text1_en}
+                                        </a>
+                                      </Button>
+                                    </ButtonContainer>
+                                  )
+                                }
+                            </> 
+                          )
+                      }
+                    </SlideOverlay>
+                  </SlideContainer>
+                )
+              })
+            }
+          </Slider>
+        </MainSliderWrapper>
+      )
+    }
+;
 
 export default SlickSlider;

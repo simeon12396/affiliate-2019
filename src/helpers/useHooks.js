@@ -21,16 +21,20 @@ export const useCurrentTime = () => {
 export const useDataFromAPI = (url) => {
     const [data, setData] = useState([]);
     const [error, setError] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch(url)
         .then(response => response.json())
-        .then(data => setData(data))
+        .then(data => {
+            setData(data);
+            setLoading(false);
+        })
         .catch(error => setError(error));
 
     }, [])
 
-    return data ? data : error;
+    return data ? [data, loading] : error;
 };
 
 export const useChangeLanguage = () => {
