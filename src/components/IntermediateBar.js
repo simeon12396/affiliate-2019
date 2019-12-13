@@ -122,7 +122,7 @@ const IntermediateBar = () => {
                                                 <Link to="/bg/terms-and-conditions">правила и условия</Link>
                                             </li>
                                             <li>
-                                                <Link to="#">комисионна</Link>
+                                                <Link to="/bg/commission">комисионна</Link>
                                             </li>
                                             <li>
                                                 <Link to="#">често задавани въпроси</Link>

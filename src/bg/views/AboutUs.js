@@ -28,7 +28,7 @@ const AboutUs = () => {
     return(
         <AboutUsWrapper className="container">
             <Breadcrumb>
-                <Breadcrumb.Item href="/">Начало</Breadcrumb.Item>
+                <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
                 <Breadcrumb.Item>За нас</Breadcrumb.Item>
             </Breadcrumb>

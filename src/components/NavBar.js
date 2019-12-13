@@ -59,7 +59,7 @@ const NavBar = (props) => {
                                     </li>
 
                                     <li>
-                                        <Link to="#">комисионна</Link>
+                                        <Link to="/bg/commission">комисионна</Link>
                                     </li>
 
                                     <li>

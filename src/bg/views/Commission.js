@@ -8,14 +8,14 @@ import Spinner from 'react-bootstrap/Spinner';
 import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
 import { SpinnerWrapper } from '../../styles/SpinnerWrapper';
-import { TermsAndCondsWrapper } from '../../styles/TermsAndConds';
+import { CommissionWrapper } from '../../styles/Commission';
 
 /** HOOKS */
-import { useDataFromAPI as useTermsAndCondData } from '../../helpers/useHooks';
+import { useDataFromAPI as useCommissionData } from '../../helpers/useHooks';
 
-const TermsAndConds = () => {
+const Commission = () => {
 
-    const [termsAndCond, loading] = useTermsAndCondData('https://dev.winbet-bg.com/api/bg/terms');
+    const [commissionData, loading] = useCommissionData('https://dev.winbet-bg.com/api/bg/commissions');
     
     if(loading) {
         return(
@@ -24,9 +24,9 @@ const TermsAndConds = () => {
           </SpinnerWrapper>
         )
       };
-
+      
     return(
-        <TermsAndCondsWrapper className="container">
+        <CommissionWrapper className="container">
             <Breadcrumb>
                 <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
@@ -38,18 +38,8 @@ const TermsAndConds = () => {
             <BlackTitle>Правила и условия</BlackTitle>
 
             <HorizontalLine red />
-
-            {
-                termsAndCond.map((data, index) => {
-                    return(
-                        <Fragment key={index}>
-                            <p dangerouslySetInnerHTML={{__html: data.description_bg}} />
-                        </Fragment>
-                    )
-                })
-            }
-        </TermsAndCondsWrapper>
+        </CommissionWrapper>
     )
 };
 
-export default TermsAndConds;
+export default Commission;
