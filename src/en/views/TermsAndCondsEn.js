@@ -7,15 +7,16 @@ import Spinner from 'react-bootstrap/Spinner';
 /** STYLED COMPONENTS */
 import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
-import { AboutUsWrapper } from '../../styles/AboutUs';
+import { TermsAndCondsWrapper } from '../../styles/TermsAndConds';
 import { SpinnerWrapper } from '../../styles/SpinnerWrapper';
 
 /** HOOKS */
-import { useDataFromAPI as useAboutUsData } from '../../helpers/useHooks';
+import { useDataFromAPI as useTermsAndCondData } from '../../helpers/useHooks';
 
-const AboutUsEn = () => {
-    const [aboutUsData, loading] = useAboutUsData('https://dev.winbet-bg.com/api/en/aboutUs');
+const TermsAndConds = () => {
 
+    const [termsAndCond, loading] = useTermsAndCondData('https://dev.winbet-bg.com/api/en/terms');
+    
     if(loading) {
         return(
           <SpinnerWrapper>
@@ -25,28 +26,30 @@ const AboutUsEn = () => {
       };
 
     return(
-        <AboutUsWrapper className="container">
+        <TermsAndCondsWrapper className="container">
             <Breadcrumb>
                 <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
 
-                <Breadcrumb.Item>About us</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Information</Breadcrumb.Item>
+
+                <Breadcrumb.Item>Terms and conditions</Breadcrumb.Item>
             </Breadcrumb>
 
-            <BlackTitle>About us</BlackTitle>
+            <BlackTitle>Terms and conditions</BlackTitle>
 
             <HorizontalLine red />
 
             {
-                aboutUsData.map((data, index) => {
+                termsAndCond.map((data, index) => {
                     return(
                         <Fragment key={index}>
-                            <p className="description" dangerouslySetInnerHTML={{__html: data.description_en}} />
+                            <p dangerouslySetInnerHTML={{__html: data.description_en}} />
                         </Fragment>
                     )
                 })
             }
-        </AboutUsWrapper>
+        </TermsAndCondsWrapper>
     )
 };
 
-export default AboutUsEn;
+export default TermsAndConds;

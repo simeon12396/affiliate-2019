@@ -55,7 +55,7 @@ const NavBar = (props) => {
 
                                 <SubUnorderedList className="sub-ul">
                                     <li>
-                                        <Link to="#">правила и условия</Link>
+                                        <Link to="/bg/terms-and-conditions">правила и условия</Link>
                                     </li>
 
                                     <li>
@@ -99,7 +99,7 @@ const NavBar = (props) => {
 
                                 <SubUnorderedList className="sub-ul">
                                     <li>
-                                        <Link to="#">terms and conditions</Link>
+                                        <Link to="/en/terms-and-conditions">terms and conditions</Link>
                                     </li>
 
                                     <li>

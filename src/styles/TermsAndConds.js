@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AboutUsWrapper = styled.section`
+export const TermsAndCondsWrapper = styled.section`
     padding: 20px 0 50px;
 
     .breadcrumb {
@@ -30,7 +30,8 @@ export const AboutUsWrapper = styled.section`
         }
     }
 
-    .description li {
-        list-style: disc;
+    h5 {
+        font-size: 16px;
+        font-weight: bold;
     }
 `;

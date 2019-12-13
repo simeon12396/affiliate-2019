@@ -119,7 +119,7 @@ const IntermediateBar = () => {
 
                                         <ul>
                                             <li>
-                                                <Link to="#">правила и условия</Link>
+                                                <Link to="/bg/terms-and-conditions">правила и условия</Link>
                                             </li>
                                             <li>
                                                 <Link to="#">комисионна</Link>
@@ -195,7 +195,7 @@ const IntermediateBar = () => {
 
                                         <ul>
                                             <li>
-                                                <Link to="#">terms and conditions</Link>
+                                                <Link to="/en/terms-and-conditions">terms and conditions</Link>
                                             </li>
                                             <li>
                                                 <Link to="#">commission plan</Link>

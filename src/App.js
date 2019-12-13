@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 /** BG VERSION */
 import Home from './bg/views/Home';
 import AboutUs from './bg/views/AboutUs';
-
+import TermsAndConds from './bg/views/TermsAndConds';
+import TermsAndCondsEn from './en/views/TermsAndCondsEn'
 /** EN VERSION */
 import HomeEn from './en/views/HomeEn';
 import AboutUsEn from './en/views/AboutUsEn';
@@ -38,6 +39,8 @@ const App = () => {
                     <Route exact path="/:lng" component={Home} />
 
                     <Route exact path="/:lng/about" component={AboutUs} />
+
+                    <Route exact path="/:lng/terms-and-conditions" component={TermsAndConds}/>
                   </MainLayout>
                 </Switch>
               ) :
@@ -48,6 +51,8 @@ const App = () => {
                     <Route exact path="/:lng" component={HomeEn} />
 
                     <Route exact path="/:lng/about" component={AboutUsEn} />
+
+                    <Route exact path="/:lng/terms-and-conditions" component={TermsAndCondsEn}/>
                   </MainLayout>
                 </Switch>
               )
