@@ -102,7 +102,7 @@ const IntermediateBar = () => {
                             <nav>
                                 <ul>
                                     <li>
-                                        <Link to="/">начало</Link>
+                                        <Link to="/bg">начало</Link>
                                     </li>
 
                                     <li>

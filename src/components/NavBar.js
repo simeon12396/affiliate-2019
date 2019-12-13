@@ -37,7 +37,7 @@ const NavBar = (props) => {
                     (
                         <UnorderedList>
                             <ListItem>
-                                <Link to="/">начало</Link>
+                                <Link to="/bg">начало</Link>
                             </ListItem>
 
                             <ListItem>
