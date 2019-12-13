@@ -15,12 +15,11 @@ import "slick-carousel/slick/slick-theme.css";
 /** ROUTER */
 import { Link } from "react-router-dom";
 
-
 /** CONTEXTS */
 import { languageContext } from '../contexts/languageContext';
 
 const NewsPanel = (props) => { 
-    const news = useNews(props.newsAPIUrl);
+    const [news, loading] = useNews(props.newsAPIUrl);
 
     const { lng } = useContext(languageContext);
 

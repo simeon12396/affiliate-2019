@@ -102,7 +102,7 @@ const IntermediateBar = () => {
                             <nav>
                                 <ul>
                                     <li>
-                                        <Link to="#">начало</Link>
+                                        <Link to="/">начало</Link>
                                     </li>
 
                                     <li>
@@ -110,7 +110,7 @@ const IntermediateBar = () => {
                                     </li>
 
                                     <li>
-                                        <Link to="#">за нас</Link>
+                                        <Link to="/bg/about">за нас</Link>
                                     </li>
 
                                     <li onClick={handleToggleInformation} className="information-li">
@@ -178,7 +178,7 @@ const IntermediateBar = () => {
                             <nav>
                                 <ul>
                                     <li>
-                                        <Link to="#">home</Link>
+                                        <Link to="/en">home</Link>
                                     </li>
 
                                     <li>
@@ -186,7 +186,7 @@ const IntermediateBar = () => {
                                     </li>
 
                                     <li>
-                                        <Link to="#">about us</Link>
+                                        <Link to="/en/about">about us</Link>
                                     </li>
 
                                     <li onClick={handleToggleInformation} className="information-li">

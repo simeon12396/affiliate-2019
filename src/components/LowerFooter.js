@@ -13,7 +13,7 @@ const LowerFooter = () => {
     const apiURL = 'https://dev.winbet-bg.com/api/partners-logo';
     const imageURL = 'https://dev.winbet-bg.com/uploads/images/partners_logo/';
 
-    let partnerLogos = usePartnersLogo(apiURL);
+    let [partnerLogos, loading] = usePartnersLogo(apiURL);
     
     const { lng } = useContext(languageContext);
 

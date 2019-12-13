@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 /** BG VERSION */
 import Home from './bg/views/Home';
-import AboutPage from './bg/views/AboutPage';
+import AboutUs from './bg/views/AboutUs';
 
 /** EN VERSION */
 import HomeEn from './en/views/HomeEn';
-import AboutPageEn from './en/views/AboutPageEn';
+import AboutUsEn from './en/views/AboutUsEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
@@ -37,7 +37,7 @@ const App = () => {
 
                     <Route exact path="/:lng" component={Home} />
 
-                    <Route exact path="/:lng/about" component={AboutPage} />
+                    <Route exact path="/:lng/about" component={AboutUs} />
                   </MainLayout>
                 </Switch>
               ) :
@@ -47,7 +47,7 @@ const App = () => {
                   <MainLayout>
                     <Route exact path="/:lng" component={HomeEn} />
 
-                    <Route exact path="/:lng/about" component={AboutPageEn} />
+                    <Route exact path="/:lng/about" component={AboutUsEn} />
                   </MainLayout>
                 </Switch>
               )
