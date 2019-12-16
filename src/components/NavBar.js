@@ -103,7 +103,7 @@ const NavBar = (props) => {
                                     </li>
 
                                     <li>
-                                        <Link to="#">commission plan</Link>
+                                        <Link to="/em/commission">commission plan</Link>
                                     </li>
 
                                     <li>

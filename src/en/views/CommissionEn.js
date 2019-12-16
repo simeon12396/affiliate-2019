@@ -20,7 +20,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const Commission = () => {
 
-    const [commissionData, loading] = useCommissionData('https://dev.winbet-bg.com/api/bg/commissions');
+    const [commissionData, loading] = useCommissionData('https://dev.winbet-bg.com/api/en/commissions');
     
     if(commissionData.length !== 0) {
       console.log(commissionData[0].procent1)
@@ -37,14 +37,14 @@ const Commission = () => {
     return(
         <CommissionWrapper className="container">
             <Breadcrumb>
-                <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
+                <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
 
-                <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">Information</Breadcrumb.Item>
 
-                <Breadcrumb.Item>Комисионна</Breadcrumb.Item>
+                <Breadcrumb.Item>Commission plan</Breadcrumb.Item>
             </Breadcrumb>
 
-            <BlackTitle>Комисионна</BlackTitle>
+            <BlackTitle>Commission plan</BlackTitle>
 
             <HorizontalLine red />
 
@@ -165,7 +165,7 @@ const Commission = () => {
                     </ChangingProgressProvider>
                   </ProgressBarsWrapper>
 
-                  <p dangerouslySetInnerHTML={{__html: commissionData[0].description_bg}} />
+                  <p dangerouslySetInnerHTML={{__html: commissionData[0].description_en}} />
                 </>
               ) : null
             }

@@ -14,6 +14,7 @@ import Commission from './bg/views/Commission';
 import HomeEn from './en/views/HomeEn';
 import AboutUsEn from './en/views/AboutUsEn';
 import TermsAndCondsEn from './en/views/TermsAndCondsEn';
+import CommissionEn from './en/views/CommissionEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
@@ -57,6 +58,8 @@ const App = () => {
                     <Route exact path="/:lng/about" component={AboutUsEn} />
 
                     <Route exact path="/:lng/terms-and-conditions" component={TermsAndCondsEn}/>
+
+                    <Route exact path="/:lng/commission" component={CommissionEn} />
                   </MainLayout>
                 </Switch>
               )
