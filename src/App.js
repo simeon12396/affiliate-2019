@@ -9,12 +9,16 @@ import Home from './bg/views/Home';
 import AboutUs from './bg/views/AboutUs';
 import TermsAndConds from './bg/views/TermsAndConds';
 import Commission from './bg/views/Commission';
+import Faq from './bg/views/FAQ';
+import RespBetting from './bg/views/RespBetting';
 
 /** EN VERSION */
 import HomeEn from './en/views/HomeEn';
 import AboutUsEn from './en/views/AboutUsEn';
 import TermsAndCondsEn from './en/views/TermsAndCondsEn';
 import CommissionEn from './en/views/CommissionEn';
+import FaqEn from './en/views/FAQEn';
+import RespBettingEn from './en/views/RespBettingEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
@@ -46,6 +50,10 @@ const App = () => {
                     <Route exact path="/:lng/terms-and-conditions" component={TermsAndConds}/>
 
                     <Route exact path="/:lng/commission" component={Commission} />
+
+                    <Route exact path="/:lng/f-a-q" component={Faq} />
+
+                    <Route exact path="/:lng/responsible-betting" component={RespBetting} />
                   </MainLayout>
                 </Switch>
               ) :
@@ -60,6 +68,10 @@ const App = () => {
                     <Route exact path="/:lng/terms-and-conditions" component={TermsAndCondsEn}/>
 
                     <Route exact path="/:lng/commission" component={CommissionEn} />
+
+                    <Route exact path="/:lng/f-a-q" component={FaqEn} />
+
+                    <Route exact path="/:lng/responsible-betting" component={RespBettingEn} />
                   </MainLayout>
                 </Switch>
               )

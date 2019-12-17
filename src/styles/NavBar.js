@@ -111,14 +111,13 @@ export const SubUnorderedList = styled.ul`
 
         &:hover {
             background: #cc2027;
-            color: white;
-
-            a   {
-                color: white;
-                text-decoration: none;
-            }
         }
         
+        &:hover a {
+            color: white !important;
+            text-decoration: none;
+        }
+
         &:nth-of-type(3) {
             padding: 10px 8px;
         }

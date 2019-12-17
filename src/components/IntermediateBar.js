@@ -125,10 +125,10 @@ const IntermediateBar = () => {
                                                 <Link to="/bg/commission">комисионна</Link>
                                             </li>
                                             <li>
-                                                <Link to="#">често задавани въпроси</Link>
+                                                <Link to="/bg/f-a-q">често задавани въпроси</Link>
                                             </li>
                                             <li>
-                                                <Link to="#">отговорно залагане</Link>
+                                                <Link to="/bg/responsible-betting">отговорно залагане</Link>
                                             </li>
                                         </ul>
                                     </li>
@@ -201,10 +201,10 @@ const IntermediateBar = () => {
                                                 <Link to="/en/commission">commission plan</Link>
                                             </li>
                                             <li>
-                                                <Link to="#">faq</Link>
+                                                <Link to="/en/f-a-q">faq</Link>
                                             </li>
                                             <li>
-                                                <Link to="#">responsible betting</Link>
+                                                <Link to="/en/responsible-betting">responsible betting</Link>
                                             </li>
                                         </ul>
                                     </li>

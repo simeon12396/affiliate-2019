@@ -64,6 +64,19 @@ export const ContactUsForm = styled.form`
             top: 100px;
         }
 
+        &-description {
+            top: 0px;
+            right: 130px;
+
+            @media(max-width: 991px) {
+                right: 100px;
+            }
+
+            @media(max-width: 767px) {
+                right: 25px;
+            }
+        }
+
         &-message {
             top: 0px;
             right: 130px;

@@ -54,115 +54,95 @@ const Commission = () => {
               (
                 <>
                   <ProgressBarsWrapper className="row justify-content-center">
-                    <ChangingProgressProvider values={[0, `${commissionData[0].procent1}`]}>
-                      {percentage => (
-                        <ProgressBarItem className="progress-bar-item">
-                          <CircularProgressbar 
-                            value={percentage} 
-                            text={`${percentage}%`}
-                            background
-                            backgroundPadding={4}
-                            styles={buildStyles({
-                              backgroundColor: "rgb(174, 19, 24)",
-                              textColor: "#fff",
-                              pathColor: "#fff",
-                              trailColor: "transparent"
-                            })} 
-                          />
-                          <p>on Total Revenue</p>
+                    <ProgressBarItem className="progress-bar-item">
+                      <CircularProgressbar 
+                        value={`${commissionData[0].procent1}`} 
+                        text={`${`${commissionData[0].procent1}`}%`}
+                        background
+                        backgroundPadding={4}
+                        styles={buildStyles({
+                          backgroundColor: "rgb(174, 19, 24)",
+                          textColor: "#fff",
+                          pathColor: "#fff",
+                          trailColor: "transparent"
+                        })} 
+                      />
+                      <p>on Total Revenue</p>
 
-                          <p>up to 20 000BGN</p>
-                        </ProgressBarItem>
-                      )}
-                    </ChangingProgressProvider>
+                      <p>up to 20 000BGN</p>
+                    </ProgressBarItem>
 
-                    <ChangingProgressProvider values={[0, `${commissionData[0].procent2}`]}>
-                      {percentage => (
-                        <ProgressBarItem className="progress-bar-item">
-                          <CircularProgressbar 
-                            value={percentage} 
-                            text={`${percentage}%`}
-                            background
-                            backgroundPadding={4}
-                            styles={buildStyles({
-                              backgroundColor: "rgb(174, 19, 24)",
-                              textColor: "#fff",
-                              pathColor: "#fff",
-                              trailColor: "transparent"
-                            })} 
-                          />
-                          <p>on Total Revenue</p>
+                    <ProgressBarItem className="progress-bar-item">
+                      <CircularProgressbar 
+                        value={`${commissionData[0].procent2}`} 
+                        text={`${`${commissionData[0].procent2}`}%`}
+                        background
+                        backgroundPadding={4}
+                        styles={buildStyles({
+                          backgroundColor: "rgb(174, 19, 24)",
+                          textColor: "#fff",
+                          pathColor: "#fff",
+                          trailColor: "transparent"
+                        })} 
+                      />
+                      <p>on Total Revenue</p>
 
-                          <p>20 001 - 40 000BGN</p>
-                        </ProgressBarItem>
-                      )}
-                    </ChangingProgressProvider>
+                      <p>20 001 - 40 000BGN</p>
+                    </ProgressBarItem>
 
-                    <ChangingProgressProvider values={[0, `${commissionData[0].procent3}`]}>
-                      {percentage => (
-                        <ProgressBarItem className="progress-bar-item">
-                          <CircularProgressbar 
-                            value={percentage} 
-                            text={`${percentage}%`}
-                            background
-                            backgroundPadding={4}
-                            styles={buildStyles({
-                              backgroundColor: "rgb(174, 19, 24)",
-                              textColor: "#fff",
-                              pathColor: "#fff",
-                              trailColor: "transparent"
-                            })} 
-                          />
-                          <p>on Total Revenue</p>
+                    <ProgressBarItem className="progress-bar-item">
+                      <CircularProgressbar 
+                        value={`${commissionData[0].procent3}`} 
+                        text={`${`${commissionData[0].procent3}`}%`}
+                        background
+                        backgroundPadding={4}
+                        styles={buildStyles({
+                          backgroundColor: "rgb(174, 19, 24)",
+                          textColor: "#fff",
+                          pathColor: "#fff",
+                          trailColor: "transparent"
+                        })} 
+                      />
+                      <p>on Total Revenue</p>
 
-                          <p>40 001 - 80 000BGN</p>
-                        </ProgressBarItem>
-                      )}
-                    </ChangingProgressProvider>
+                      <p>40 001 - 80 000BGN</p>
+                    </ProgressBarItem>
 
-                    <ChangingProgressProvider values={[0, `${commissionData[0].procent4}`]}>
-                      {percentage => (
-                        <ProgressBarItem className="progress-bar-item">
-                          <CircularProgressbar 
-                            value={percentage} 
-                            text={`${percentage}%`}
-                            background
-                            backgroundPadding={4}
-                            styles={buildStyles({
-                              backgroundColor: "rgb(174, 19, 24)",
-                              textColor: "#fff",
-                              pathColor: "#fff",
-                              trailColor: "transparent"
-                            })} 
-                          />
-                          <p>on Total Revenue</p>
+                    <ProgressBarItem className="progress-bar-item">
+                      <CircularProgressbar 
+                        value={`${commissionData[0].procent4}`} 
+                        text={`${`${commissionData[0].procent4}`}%`}
+                        background
+                        backgroundPadding={4}
+                        styles={buildStyles({
+                          backgroundColor: "rgb(174, 19, 24)",
+                          textColor: "#fff",
+                          pathColor: "#fff",
+                          trailColor: "transparent"
+                        })} 
+                      />
+                      <p>on Total Revenue</p>
 
-                          <p>80 001 - 100 000BGN</p>
-                        </ProgressBarItem>
-                      )}
-                    </ChangingProgressProvider>
+                      <p>80 001 - 100 000BGN</p>
+                    </ProgressBarItem>
 
-                    <ChangingProgressProvider values={[0, `${commissionData[0].procent5}`]}>
-                      {percentage => (
-                        <ProgressBarItem className="progress-bar-item">
-                          <CircularProgressbar 
-                            value={percentage} 
-                            text={`${percentage}%`}
-                            background
-                            backgroundPadding={4}
-                            styles={buildStyles({
-                              backgroundColor: "rgb(174, 19, 24)",
-                              textColor: "#fff",
-                              pathColor: "#fff",
-                              trailColor: "transparent"
-                            })} 
-                          />
-                          <p>on Total Revenue</p>
+                    <ProgressBarItem className="progress-bar-item">
+                      <CircularProgressbar 
+                        value={`${commissionData[0].procent5}`} 
+                        text={`${`${commissionData[0].procent5}`}%`}
+                        background
+                        backgroundPadding={4}
+                        styles={buildStyles({
+                          backgroundColor: "rgb(174, 19, 24)",
+                          textColor: "#fff",
+                          pathColor: "#fff",
+                          trailColor: "transparent"
+                        })} 
+                      />
+                      <p>on Total Revenue</p>
 
-                          <p>over 100 000BGN</p>
-                        </ProgressBarItem>
-                      )}
-                    </ChangingProgressProvider>
+                      <p>over 100 000BGN</p>
+                    </ProgressBarItem>
                   </ProgressBarsWrapper>
 
                   <p dangerouslySetInnerHTML={{__html: commissionData[0].description_bg}} />
