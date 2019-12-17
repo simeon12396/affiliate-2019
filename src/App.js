@@ -11,6 +11,7 @@ import TermsAndConds from './bg/views/TermsAndConds';
 import Commission from './bg/views/Commission';
 import Faq from './bg/views/FAQ';
 import RespBetting from './bg/views/RespBetting';
+import Contacts from './bg/views/Contacts';
 
 /** EN VERSION */
 import HomeEn from './en/views/HomeEn';
@@ -54,6 +55,8 @@ const App = () => {
                     <Route exact path="/:lng/f-a-q" component={Faq} />
 
                     <Route exact path="/:lng/responsible-betting" component={RespBetting} />
+
+                    <Route exact path="/:lng/contacts" component={Contacts} />
                   </MainLayout>
                 </Switch>
               ) :
