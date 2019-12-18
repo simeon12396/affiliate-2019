@@ -31,7 +31,7 @@ const RespBetting = () => {
                 <Breadcrumb>
                     <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
-                    <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/bg/information">Информация</Breadcrumb.Item>
 
                     <Breadcrumb.Item>Отговорно залагане</Breadcrumb.Item>
                 </Breadcrumb>

@@ -8,18 +8,18 @@ import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
 import { BreadcrumbWrapper} from '../../styles/Breadcrumb';
 
-const Information = () => {
+const InformationEn = () => {
     return(
         <div className="container">
             <BreadcrumbWrapper>
                 <Breadcrumb>
-                    <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
 
-                    <Breadcrumb.Item>Информация</Breadcrumb.Item>
+                    <Breadcrumb.Item>Information</Breadcrumb.Item>
                 </Breadcrumb>
             </BreadcrumbWrapper>
 
-            <BlackTitle>Информация</BlackTitle>
+            <BlackTitle>Information</BlackTitle>
 
             <HorizontalLine red />
 
@@ -29,11 +29,11 @@ const Information = () => {
                 marginBottom: '45px'
                 }}
             >
-                В тази категория ще намерите най-важните теми и въпроси, относно нашата Партньорска програма.
-                Съветваме Ви редовно да проверявате нашия сайт, защото постоянно пускаме нови промоции и нововъведения.
+            In this category, you will find the most useful information regarding our Affiliate program.
+            We kindly advise you to check regularly our site for new promotions and implementations.
             </p>
         </div>
     )
 };
 
-export default Information;
+export default InformationEn;

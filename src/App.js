@@ -12,6 +12,7 @@ import Commission from './bg/views/Commission';
 import Faq from './bg/views/FAQ';
 import RespBetting from './bg/views/RespBetting';
 import Contacts from './bg/views/Contacts';
+import Information from './bg/views/Information';
 
 /** EN VERSION */
 import HomeEn from './en/views/HomeEn';
@@ -21,6 +22,7 @@ import CommissionEn from './en/views/CommissionEn';
 import FaqEn from './en/views/FAQEn';
 import RespBettingEn from './en/views/RespBettingEn';
 import ContactsEn from './en/views/ContactsEn';
+import InformationEn from './en/views/InformationEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
@@ -58,6 +60,8 @@ const App = () => {
                     <Route exact path="/:lng/responsible-betting" component={RespBetting} />
 
                     <Route exact path="/:lng/contacts" component={Contacts} />
+
+                    <Route exact path="/:lng/information" component={Information} />
                   </MainLayout>
                 </Switch>
               ) :
@@ -78,6 +82,8 @@ const App = () => {
                     <Route exact path="/:lng/responsible-betting" component={RespBettingEn} />
 
                     <Route exact path="/:lng/contacts" component={ContactsEn} />
+
+                    <Route exact path="/:lng/information" component={InformationEn} />
                   </MainLayout>
                 </Switch>
               )

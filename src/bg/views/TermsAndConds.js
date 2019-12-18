@@ -32,7 +32,7 @@ const TermsAndConds = () => {
                 <Breadcrumb>
                     <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
-                    <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/bg/information">Информация</Breadcrumb.Item>
 
                     <Breadcrumb.Item>Правила и условия</Breadcrumb.Item>
                 </Breadcrumb>

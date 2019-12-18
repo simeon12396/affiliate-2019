@@ -17,8 +17,6 @@ const Contacts = () => {
                 <Breadcrumb>
                     <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
-                    <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
-
                     <Breadcrumb.Item>Контакти</Breadcrumb.Item>
                 </Breadcrumb>
             </BreadcrumbWrapper>

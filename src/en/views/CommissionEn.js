@@ -40,7 +40,7 @@ const CommissionEn = () => {
               <Breadcrumb>
                   <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
 
-                  <Breadcrumb.Item href="#">Information</Breadcrumb.Item>
+                  <Breadcrumb.Item href="/en/information">Information</Breadcrumb.Item>
 
                   <Breadcrumb.Item>Commission plan</Breadcrumb.Item>
               </Breadcrumb>
