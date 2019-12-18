@@ -13,7 +13,7 @@ import { FAQWrapper } from '../../styles/FAQ';
 /** HOOKS */
 import { useDataFromAPI as useFAQData } from '../../helpers/useHooks';
 
-const FAQ = () => {
+const FAQEn = () => {
     const [FAQ, loading] = useFAQData('https://dev.winbet-bg.com/api/en/faq');
 
     if(loading) {
@@ -51,4 +51,4 @@ const FAQ = () => {
     )
 };
 
-export default FAQ;
+export default FAQEn;

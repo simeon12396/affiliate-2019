@@ -13,7 +13,7 @@ import { RespBettingWrapper } from '../../styles/RespBetting';
 /** HOOKS */
 import { useDataFromAPI as useRespBettingData } from '../../helpers/useHooks';
 
-const RespBetting = () => {
+const RespBettingEn = () => {
     const [responsibleBetting, loading] = useRespBettingData('https://dev.winbet-bg.com/api/en/bettings');
 
     if(loading) {
@@ -51,4 +51,4 @@ const RespBetting = () => {
     )
 };
 
-export default RespBetting;
+export default RespBettingEn;

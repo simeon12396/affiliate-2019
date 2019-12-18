@@ -15,7 +15,6 @@ import { useDataFromAPI as useCommissionData } from '../../helpers/useHooks';
 
 /** CIRCULAR PROGRESS BAR PLUGIN */
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import ChangingProgressProvider from "../../components/ChangingProgressProvider";
 import 'react-circular-progressbar/dist/styles.css';
 
 const Commission = () => {

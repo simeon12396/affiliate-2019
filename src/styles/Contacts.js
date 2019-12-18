@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const ContactsUsWrapper = styled.section`
+    padding-top: 20px;
+
     .breadcrumb {
         justify-content: flex-end;
         background: none;
