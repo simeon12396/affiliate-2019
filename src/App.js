@@ -20,6 +20,7 @@ import TermsAndCondsEn from './en/views/TermsAndCondsEn';
 import CommissionEn from './en/views/CommissionEn';
 import FaqEn from './en/views/FAQEn';
 import RespBettingEn from './en/views/RespBettingEn';
+import ContactsEn from './en/views/ContactsEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
@@ -75,6 +76,8 @@ const App = () => {
                     <Route exact path="/:lng/f-a-q" component={FaqEn} />
 
                     <Route exact path="/:lng/responsible-betting" component={RespBettingEn} />
+
+                    <Route exact path="/:lng/contacts" component={ContactsEn} />
                   </MainLayout>
                 </Switch>
               )
