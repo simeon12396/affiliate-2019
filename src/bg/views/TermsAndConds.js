@@ -9,6 +9,7 @@ import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
 import { SpinnerWrapper } from '../../styles/SpinnerWrapper';
 import { TermsAndCondsWrapper } from '../../styles/TermsAndConds';
+import { BreadcrumbWrapper} from '../../styles/Breadcrumb';
 
 /** HOOKS */
 import { useDataFromAPI as useTermsAndCondData } from '../../helpers/useHooks';
@@ -27,13 +28,15 @@ const TermsAndConds = () => {
 
     return(
         <TermsAndCondsWrapper className="container">
-            <Breadcrumb>
-                <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
+            <BreadcrumbWrapper>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
-                <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
+                    <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
 
-                <Breadcrumb.Item>Правила и условия</Breadcrumb.Item>
-            </Breadcrumb>
+                    <Breadcrumb.Item>Правила и условия</Breadcrumb.Item>
+                </Breadcrumb>
+            </BreadcrumbWrapper>
 
             <BlackTitle>Правила и условия</BlackTitle>
 

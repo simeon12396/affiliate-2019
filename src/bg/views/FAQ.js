@@ -9,6 +9,7 @@ import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
 import { SpinnerWrapper } from '../../styles/SpinnerWrapper';
 import { FAQWrapper } from '../../styles/FAQ';
+import { BreadcrumbWrapper} from '../../styles/Breadcrumb';
 
 /** HOOKS */
 import { useDataFromAPI as useFAQData } from '../../helpers/useHooks';
@@ -26,13 +27,15 @@ const FAQ = () => {
 
     return(
         <FAQWrapper className="container">
-            <Breadcrumb>
-                <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
+            <BreadcrumbWrapper>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
-                <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
+                    <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
 
-                <Breadcrumb.Item>Често задавани въпроси</Breadcrumb.Item>
-            </Breadcrumb>
+                    <Breadcrumb.Item>Често задавани въпроси</Breadcrumb.Item>
+                </Breadcrumb>
+            </BreadcrumbWrapper>
 
             <BlackTitle>Често задавани въпроси</BlackTitle>
 

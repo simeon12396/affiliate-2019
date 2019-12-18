@@ -5,11 +5,10 @@ export const ContactUsWrapper = styled.section`
     text-align: center;
 
     h2 {
-        margin: 120px 0 25px;
-        margin-bottom: 25px;
         font-size: 38px;
         font-weight: bold;
         color: #212121;
+        margin: 120px 0 25px;
     }
 
     p {

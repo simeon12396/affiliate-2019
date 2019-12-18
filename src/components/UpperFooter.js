@@ -44,31 +44,31 @@ const UpperFooter = () => {
                         <section className="col-sm-6 col-lg-3">
                             <h4>Winbet</h4>
 
-                            <Link to="#">За нас</Link>
-                            <Link to="#">Новини</Link>
-                            <Link to="#">Игрален сайт</Link>
+                            <Link to="/bg/about" target="_blank">За нас</Link>
+                            <Link to="#" target="_blank">Новини</Link>
+                            <a href="https://winbet.bg/bg/casino/all" target="_blank">Игрален сайт</a>
                         </section>
 
                         <section className="col-sm-6 col-lg-3">
                             <h4>Информация за партньори</h4>
 
-                            <Link to="#">Правила и условия</Link>
-                            <Link to="#">Комисионна</Link>
-                            <Link to="#">Често задавани въпроси</Link>
-                            <Link to="#">Отговорно залагане</Link>
+                            <Link to="/bg/terms-and-conditions" target="_blank">Правила и условия</Link>
+                            <Link to="/bg/commission" target="_blank">Комисионна</Link>
+                            <Link to="/bg/f-a-q" target="_blank">Често задавани въпроси</Link>
+                            <Link to="/bg/responsible-betting" target="_blank">Отговорно залагане</Link>
                         </section>
 
                         <section className="col-sm-6 col-lg-3">
                             <h4>Обслужване на клиенти</h4>
 
-                            <Link to="#">Бонуси и промоции</Link>
-                            <Link to="#">Депозити и тегления</Link>
+                            <a href="https://winbet.bg/bg/promotion/" target="_blank">Бонуси и промоции</a>
+                            <a href="https://winbet.bg/bg/help/payments/deposit" target="_blank">Депозити и тегления</a>
                         </section>
 
                         <section className="col-sm-6 col-lg-3">
                             <h4>Контакти</h4>
 
-                            <Link to="#">Контактна форма</Link>
+                            <Link to="/bg/contacts" target="_blank">Контактна форма</Link>
                         </section>
                     </Information>
                 ) :
@@ -78,31 +78,31 @@ const UpperFooter = () => {
                         <section className="col-sm-6 col-lg-3">
                             <h4>Winbet</h4>
 
-                            <Link to="#">About us</Link>
+                            <Link to="/en/about">About us</Link>
                             <Link to="#">News</Link>
-                            <Link to="#">Live site</Link>
+                            <a href="https://winbet.bg/bg/casino/all" target="_blank">Live site</a>
                         </section>
 
                         <section className="col-sm-6 col-lg-3">
                             <h4>Partners information</h4>
 
-                            <Link to="#">Terms and conditions</Link>
-                            <Link to="#">Commission</Link>
-                            <Link to="#">FAQ</Link>
-                            <Link to="#">Responsible betting</Link>
+                            <Link to="/en/terms-and-conditions" target="_blank">Terms and conditions</Link>
+                            <Link to="/en/commission" target="_blank">Commission</Link>
+                            <Link to="/en/f-a-q" target="_blank">FAQ</Link>
+                            <Link to="/en/responsible-betting" target="_blank">Responsible betting</Link>
                         </section>
 
                         <section className="col-sm-6 col-lg-3">
                             <h4>Customer service</h4>
 
-                            <Link to="#">Bonuses and promotions</Link>
-                            <Link to="#">Deposit and payments</Link>
+                            <a href="https://winbet.bg/bg/promotion/" target="_blank">Bonuses and promotions</a>
+                            <a href="https://winbet.bg/bg/help/payments/deposit" target="_blank">Deposit and payments</a>
                         </section>
 
                         <section className="col-sm-6 col-lg-3">
                             <h4>Concats</h4>
 
-                            <Link to="#">Contact form</Link>
+                            <Link to="/en/contacts" target="_blank">Contact form</Link>
                         </section>
                     </Information>
                 )

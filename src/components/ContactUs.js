@@ -35,7 +35,7 @@ const ContactUs = () => {
     const handleShow = () => setShow(true);
 
     return(
-        <ContactUsWrapper className="container">
+        <ContactUsWrapper className="container" home>
             {
                 ( lng === 'bg') ?
 

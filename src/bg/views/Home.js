@@ -19,7 +19,7 @@ const Home = (props) => {
 
             <NewsPanel newsAPIUrl = 'https://dev.winbet-bg.com/api/bg/news' />
 
-            <ContactUs />
+            <ContactUs/>
         </main>
     );
 };

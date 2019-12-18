@@ -5,6 +5,7 @@ import ContactsUsForm from '../../components/ContactUs';
 
 /** STYLED COMPONENTS */
 import { ContactsUsWrapper } from '../../styles/Contacts';
+import { BreadcrumbWrapper} from '../../styles/Breadcrumb';
 
 /** REACT BOOTSTRAP */
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
@@ -12,15 +13,17 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 const Contacts = () => {
     return(
         <ContactsUsWrapper className="container">
-            <Breadcrumb>
-                <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
+            <BreadcrumbWrapper>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
-                <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
+                    <Breadcrumb.Item href="#">Информация</Breadcrumb.Item>
 
-                <Breadcrumb.Item>Контакти</Breadcrumb.Item>
-            </Breadcrumb>
+                    <Breadcrumb.Item>Контакти</Breadcrumb.Item>
+                </Breadcrumb>
+            </BreadcrumbWrapper>
 
-            <ContactsUsForm/>
+            <ContactsUsForm />
         </ContactsUsWrapper>
     )
 };

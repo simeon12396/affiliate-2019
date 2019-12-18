@@ -9,6 +9,7 @@ import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
 import { SpinnerWrapper } from '../../styles/SpinnerWrapper';
 import { RespBettingWrapper } from '../../styles/RespBetting';
+import { BreadcrumbWrapper} from '../../styles/Breadcrumb';
 
 /** HOOKS */
 import { useDataFromAPI as useRespBettingData } from '../../helpers/useHooks';
@@ -26,13 +27,15 @@ const RespBettingEn = () => {
 
     return(
         <RespBettingWrapper className="container">
-            <Breadcrumb>
-                <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
+            <BreadcrumbWrapper>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
 
-                <Breadcrumb.Item href="#">Information</Breadcrumb.Item>
+                    <Breadcrumb.Item href="#">Information</Breadcrumb.Item>
 
-                <Breadcrumb.Item>Responsible betting</Breadcrumb.Item>
-            </Breadcrumb>
+                    <Breadcrumb.Item>Responsible betting</Breadcrumb.Item>
+                </Breadcrumb>
+            </BreadcrumbWrapper>
 
             <BlackTitle>Responsible betting</BlackTitle>
 

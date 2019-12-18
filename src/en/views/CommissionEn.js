@@ -9,6 +9,7 @@ import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
 import { SpinnerWrapper } from '../../styles/SpinnerWrapper';
 import { CommissionWrapper, ProgressBarsWrapper, ProgressBarItem } from '../../styles/Commission';
+import { BreadcrumbWrapper} from '../../styles/Breadcrumb';
 
 /** HOOKS */
 import { useDataFromAPI as useCommissionData } from '../../helpers/useHooks';
@@ -35,13 +36,15 @@ const CommissionEn = () => {
       
     return(
         <CommissionWrapper className="container">
-            <Breadcrumb>
-                <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
+            <BreadcrumbWrapper>
+              <Breadcrumb>
+                  <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
 
-                <Breadcrumb.Item href="#">Information</Breadcrumb.Item>
+                  <Breadcrumb.Item href="#">Information</Breadcrumb.Item>
 
-                <Breadcrumb.Item>Commission plan</Breadcrumb.Item>
-            </Breadcrumb>
+                  <Breadcrumb.Item>Commission plan</Breadcrumb.Item>
+              </Breadcrumb>
+            </BreadcrumbWrapper>
 
             <BlackTitle>Commission plan</BlackTitle>
 

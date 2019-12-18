@@ -9,6 +9,7 @@ import { HorizontalLine } from '../../styles/HorizontalLine';
 import { BlackTitle } from '../../styles/BlackTitle';
 import { AboutUsWrapper } from '../../styles/AboutUs';
 import { SpinnerWrapper } from '../../styles/SpinnerWrapper';
+import { BreadcrumbWrapper} from '../../styles/Breadcrumb';
 
 /** HOOKS */
 import { useDataFromAPI as useAboutUsData } from '../../helpers/useHooks';
@@ -26,11 +27,13 @@ const AboutUsEn = () => {
 
     return(
         <AboutUsWrapper className="container">
-            <Breadcrumb>
-                <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
+            <BreadcrumbWrapper>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
 
-                <Breadcrumb.Item>About us</Breadcrumb.Item>
-            </Breadcrumb>
+                    <Breadcrumb.Item>About us</Breadcrumb.Item>
+                </Breadcrumb>
+            </BreadcrumbWrapper>
 
             <BlackTitle>About us</BlackTitle>
 
