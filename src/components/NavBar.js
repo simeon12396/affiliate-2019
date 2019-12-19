@@ -41,7 +41,7 @@ const NavBar = (props) => {
                             </ListItem>
 
                             <ListItem>
-                                <Link to="#">новини</Link>
+                                <Link to="/bg/news">новини</Link>
                             </ListItem>
                             
                             <ListItem>
@@ -85,7 +85,7 @@ const NavBar = (props) => {
                             </ListItem>
 
                             <ListItem>
-                                <Link to="#">news</Link>
+                                <Link to="/en/news">news</Link>
                             </ListItem>
                             
                             <ListItem>

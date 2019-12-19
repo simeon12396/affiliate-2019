@@ -13,6 +13,7 @@ import Faq from './bg/views/FAQ';
 import RespBetting from './bg/views/RespBetting';
 import Contacts from './bg/views/Contacts';
 import Information from './bg/views/Information';
+import News from './bg/views/News';
 
 /** EN VERSION */
 import HomeEn from './en/views/HomeEn';
@@ -23,6 +24,7 @@ import FaqEn from './en/views/FAQEn';
 import RespBettingEn from './en/views/RespBettingEn';
 import ContactsEn from './en/views/ContactsEn';
 import InformationEn from './en/views/InformationEn';
+import NewsEn from './en/views/NewsEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
@@ -62,6 +64,8 @@ const App = () => {
                     <Route exact path="/:lng/contacts" component={Contacts} />
 
                     <Route exact path="/:lng/information" component={Information} />
+
+                    <Route exact path="/:lng/news" component={News} />
                   </MainLayout>
                 </Switch>
               ) :
@@ -84,6 +88,8 @@ const App = () => {
                     <Route exact path="/:lng/contacts" component={ContactsEn} />
 
                     <Route exact path="/:lng/information" component={InformationEn} />
+
+                    <Route exact path="/:lng/news" component={NewsEn} />
                   </MainLayout>
                 </Switch>
               )

@@ -106,7 +106,7 @@ const IntermediateBar = () => {
                                     </li>
 
                                     <li>
-                                        <Link to="#">новини</Link>
+                                        <Link to="/bg/news">новини</Link>
                                     </li>
 
                                     <li>
@@ -182,7 +182,7 @@ const IntermediateBar = () => {
                                     </li>
 
                                     <li>
-                                        <Link to="#">news</Link>
+                                        <Link to="/en/news">news</Link>
                                     </li>
 
                                     <li>
