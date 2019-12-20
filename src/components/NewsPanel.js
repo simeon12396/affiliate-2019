@@ -65,7 +65,7 @@ const NewsPanel = (props) => {
                         </NewsSlider>
 
                         <NewsButton>
-                            <Link to="#">Всички новини</Link>
+                            <Link to="/bg/news">Всички новини</Link>
                         </NewsButton>
                     </>
                 ) : 
@@ -95,7 +95,7 @@ const NewsPanel = (props) => {
                         </NewsSlider>
 
                         <NewsButton>
-                            <Link to="#">All news</Link>
+                            <Link to="/en/news">All news</Link>
                         </NewsButton>
                     </>
                 )

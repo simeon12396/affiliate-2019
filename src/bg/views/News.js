@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 /** COMPONENTS */
 import SlickSlider from '../../components/SlickSlider';
 import CasinoContent from '../../components/CasinoContent';
+import NewsPerPage from '../../components/NewsPerPage';
 
 /** STYLED COMPONENTS */
 import { BreadcrumbWrapper } from '../../styles/Breadcrumb';
@@ -13,13 +14,21 @@ import { HorizontalLine } from '../../styles/HorizontalLine';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const News = () => {
+    useEffect(() => {
+        window.scrollTo(0, 1100);
+
+        return () => {
+            window.scrollTo(0,0)
+        }
+    }, []);
+
     return(
         <>
             <SlickSlider slidersAPIUrl ='https://dev.winbet-bg.com/api/bg/sliders' />
 
             <CasinoContent />
 
-            <NewsWrapper className="container">
+            <NewsWrapper className="container" id="news-wrapper">
                 <BreadcrumbWrapper>
                     <Breadcrumb>
                         <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
@@ -31,9 +40,11 @@ const News = () => {
                 <h2>Последни новини</h2>
 
                 <HorizontalLine red/>
+
+                <NewsPerPage url="https://dev.winbet-bg.com/api/bg/news" />
             </NewsWrapper>
         </>
     );
-}
+};
 
 export default News;
