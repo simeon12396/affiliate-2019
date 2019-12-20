@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/simeon12396/affiliate-2019.git/static/css/main.5b14353b.chunk.css",
-    "main.js": "/simeon12396/affiliate-2019.git/static/js/main.6a4b4739.chunk.js",
-    "main.js.map": "/simeon12396/affiliate-2019.git/static/js/main.6a4b4739.chunk.js.map",
-    "runtime-main.js": "/simeon12396/affiliate-2019.git/static/js/runtime-main.976cded6.js",
-    "runtime-main.js.map": "/simeon12396/affiliate-2019.git/static/js/runtime-main.976cded6.js.map",
-    "static/css/2.ece91136.chunk.css": "/simeon12396/affiliate-2019.git/static/css/2.ece91136.chunk.css",
-    "static/js/2.aa0f52f0.chunk.js": "/simeon12396/affiliate-2019.git/static/js/2.aa0f52f0.chunk.js",
-    "static/js/2.aa0f52f0.chunk.js.map": "/simeon12396/affiliate-2019.git/static/js/2.aa0f52f0.chunk.js.map",
-    "index.html": "/simeon12396/affiliate-2019.git/index.html",
-    "precache-manifest.5971625eb100cab093eec80cb8111c79.js": "/simeon12396/affiliate-2019.git/precache-manifest.5971625eb100cab093eec80cb8111c79.js",
-    "service-worker.js": "/simeon12396/affiliate-2019.git/service-worker.js",
-    "static/css/2.ece91136.chunk.css.map": "/simeon12396/affiliate-2019.git/static/css/2.ece91136.chunk.css.map",
-    "static/css/main.5b14353b.chunk.css.map": "/simeon12396/affiliate-2019.git/static/css/main.5b14353b.chunk.css.map",
-    "static/media/panel-bck.png": "/simeon12396/affiliate-2019.git/static/media/panel-bck.1a7948b3.png",
-    "static/media/slick-theme.css": "/simeon12396/affiliate-2019.git/static/media/slick.f97e3bbf.svg"
+    "main.css": "/affiliate-2019/static/css/main.5b14353b.chunk.css",
+    "main.js": "/affiliate-2019/static/js/main.5167f3da.chunk.js",
+    "main.js.map": "/affiliate-2019/static/js/main.5167f3da.chunk.js.map",
+    "runtime-main.js": "/affiliate-2019/static/js/runtime-main.d8b803eb.js",
+    "runtime-main.js.map": "/affiliate-2019/static/js/runtime-main.d8b803eb.js.map",
+    "static/css/2.56fc38c1.chunk.css": "/affiliate-2019/static/css/2.56fc38c1.chunk.css",
+    "static/js/2.ed1e1315.chunk.js": "/affiliate-2019/static/js/2.ed1e1315.chunk.js",
+    "static/js/2.ed1e1315.chunk.js.map": "/affiliate-2019/static/js/2.ed1e1315.chunk.js.map",
+    "index.html": "/affiliate-2019/index.html",
+    "precache-manifest.c6d22cfed0effb2076cd1db2a101225b.js": "/affiliate-2019/precache-manifest.c6d22cfed0effb2076cd1db2a101225b.js",
+    "service-worker.js": "/affiliate-2019/service-worker.js",
+    "static/css/2.56fc38c1.chunk.css.map": "/affiliate-2019/static/css/2.56fc38c1.chunk.css.map",
+    "static/css/main.5b14353b.chunk.css.map": "/affiliate-2019/static/css/main.5b14353b.chunk.css.map",
+    "static/media/panel-bck.png": "/affiliate-2019/static/media/panel-bck.1a7948b3.png",
+    "static/media/slick-theme.css": "/affiliate-2019/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.976cded6.js",
-    "static/css/2.ece91136.chunk.css",
-    "static/js/2.aa0f52f0.chunk.js",
+    "static/js/runtime-main.d8b803eb.js",
+    "static/css/2.56fc38c1.chunk.css",
+    "static/js/2.ed1e1315.chunk.js",
     "static/css/main.5b14353b.chunk.css",
-    "static/js/main.6a4b4739.chunk.js"
+    "static/js/main.5167f3da.chunk.js"
   ]
 }
