@@ -51,12 +51,13 @@ export const UnorderedList = styled.ul`
 
 export const ListItem = styled.li`
     margin-right: 5px;
-    padding: 10px 15px;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     list-style: none;
     transition: all .2s linear;
-    
+    height: 100%;
+    width: 80px;
+
     &:hover {
         background: #cc2027;
         cursor: pointer;
@@ -69,8 +70,16 @@ export const ListItem = styled.li`
 
     &:nth-of-type(4) {
         display: flex;
-        align-items: flex-start;
         position: relative;
+        width: 140px;
+        align-items: center;
+        justify-content: space-around;
+
+        svg {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+        }
 
         &:hover .sub-ul {
             display: block;
@@ -83,13 +92,22 @@ export const ListItem = styled.li`
         }
     }
 
+    &:nth-of-type(5) {
+        width: 100px;
+    }
+
     a {
         text-decoration: none;
         color: white;
+        width: inherit;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .icon {
-        margin-left: 4px;
+        margin-right: 5px;
         font-size: 16px;
     }
 `;
