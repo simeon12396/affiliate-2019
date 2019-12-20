@@ -18,6 +18,7 @@ const NewsPerPage = (props) => {
 
     const [newsData, loading] = useNewsData(props.url);
 
+    console.log(newsData)
     const newsImgUrl = "https://dev.winbet-bg.com/uploads/images/news/";
 
     const { lng } = useContext(languageContext);
