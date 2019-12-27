@@ -45,21 +45,21 @@ const NewsPerPage = (props) => {
                                 <span className="news-information-date">{singleNews.date}</span>
                                 <div className="news-information-line"></div>
                                 {
-                                (lng === 'bg') ? 
-                                (
-                                    <>
-                                        <h4 className="news-information-title">{singleNews.title_bg}</h4>
-                                        <p className="news-information-short-description">{singleNews.short_description_bg}</p>
-                                        <Link className="news-information-link" to="#">Прочети ></Link>
-                                    </>
-                                ) :
-                                (
-                                    <>
-                                        <h4 className="news-information-title">{singleNews.title_en}</h4>
-                                        <p className="news-information-short-description">{singleNews.short_description_en}</p>
-                                        <Link className="news-information-link" to="#">Read ></Link>
-                                    </>
-                                )
+                                    (lng === 'bg') ? 
+                                    (
+                                        <>
+                                            <h4 className="news-information-title">{singleNews.title_bg}</h4>
+                                            <p className="news-information-short-description">{singleNews.short_description_bg}</p>
+                                            <Link className="news-information-link" to="#">Прочети ></Link>
+                                        </>
+                                    ) :
+                                    (
+                                        <>
+                                            <h4 className="news-information-title">{singleNews.title_en}</h4>
+                                            <p className="news-information-short-description">{singleNews.short_description_en}</p>
+                                            <Link className="news-information-link" to="#">Read ></Link>
+                                        </>
+                                    )
                                 }
                             </div>
                         </SingleNews>

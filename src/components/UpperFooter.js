@@ -19,19 +19,19 @@ const UpperFooter = () => {
     return(
         <UpperFooterWrapper>
             <ButtonsContainer>
-                <SocialButtons>
+                <SocialButtons href="https://www.facebook.com/winbet.bg.online/" target="_blank">
                     <FontAwesomeIcon icon={faFacebookF} />
                 </SocialButtons>
 
-                <SocialButtons>
+                <SocialButtons href="https://www.instagram.com/winbet.online.casino/" target="_blank">
                     <FontAwesomeIcon icon={faInstagram} />
                 </SocialButtons>
 
-                <SocialButtons>
+                <SocialButtons href="https://www.youtube.com/channel/UCPP2j-r6BqACf-EUbEIx0Pg" target="_blank">
                     <FontAwesomeIcon icon={faYoutube} />
                 </SocialButtons>
 
-                <SocialButtons>
+                <SocialButtons href="https://twitter.com/dwinbet" target="_blank">
                     <FontAwesomeIcon icon={faTwitter} />
                 </SocialButtons>
             </ButtonsContainer>
@@ -45,7 +45,7 @@ const UpperFooter = () => {
                             <h4>Winbet</h4>
 
                             <Link to="/bg/about" target="_blank">За нас</Link>
-                            <Link to="#" target="_blank">Новини</Link>
+                            <Link to="/bg/news" target="_blank">Новини</Link>
                             <a href="https://winbet.bg/bg/casino/all" target="_blank">Игрален сайт</a>
                         </section>
 
@@ -79,7 +79,7 @@ const UpperFooter = () => {
                             <h4>Winbet</h4>
 
                             <Link to="/en/about">About us</Link>
-                            <Link to="#">News</Link>
+                            <Link to="/en/news">News</Link>
                             <a href="https://winbet.bg/bg/casino/all" target="_blank">Live site</a>
                         </section>
 
