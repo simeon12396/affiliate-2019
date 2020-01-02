@@ -14,6 +14,7 @@ import RespBetting from './bg/views/RespBetting';
 import Contacts from './bg/views/Contacts';
 import Information from './bg/views/Information';
 import News from './bg/views/News';
+import SingleNews from './bg/views/SingleNews';
 
 /** EN VERSION */
 import HomeEn from './en/views/HomeEn';
@@ -66,6 +67,8 @@ const App = () => {
                     <Route exact path="/:lng/information" component={Information} />
 
                     <Route exact path="/:lng/news" component={News} />
+
+                    <Route exact path="/:lng/news:id" component={SingleNews} />
                   </MainLayout>
                 </Switch>
               ) :

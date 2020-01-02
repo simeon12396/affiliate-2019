@@ -16,7 +16,7 @@ const HomeEn = () => {
 
             <PartnerPrograms />
 
-            <NewsPanel newsAPIUrl = 'https://dev.winbet-bg.com/api/en/news' />
+            <NewsPanel newsAPIUrl='https://dev.winbet-bg.com/api/en/news' />
 
             <ContactUs />
         </main>

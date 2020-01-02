@@ -15,7 +15,7 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const News = () => {
     useEffect(() => {
-        window.scrollTo(0, 1100);
+        window.scrollTo(0, 700);
 
         return () => {
             window.scrollTo(0,0)

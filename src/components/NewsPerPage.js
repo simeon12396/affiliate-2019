@@ -1,4 +1,4 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Fragment, useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 
 /** STYLED COMPONENTS */
@@ -14,11 +14,19 @@ import Spinner from 'react-bootstrap/Spinner';
 /** CONTEXTS */
 import { languageContext } from '../contexts/languageContext';
 
+/** COMPONENTS */
+import Pagination from '../components/Pagination';
+
 const NewsPerPage = (props) => {
 
     const [newsData, loading] = useNewsData(props.url);
-
-    console.log(newsData)
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(4);
+    
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = newsData.slice(indexOfFirstPost, indexOfLastPost);
+    
     const newsImgUrl = "https://dev.winbet-bg.com/uploads/images/news/";
 
     const { lng } = useContext(languageContext);
@@ -34,10 +42,11 @@ const NewsPerPage = (props) => {
     return(
         <NewsPerPageCnt>
             {
-                newsData && newsData.map((singleNews, index) => {
+                currentPosts && currentPosts.map((singleNews, index) => {
+                    console.log(index)
                     return(
                         <SingleNews key={index}>
-                            <Link to="#" className="router-link-image">
+                            <Link to={`/bg/news${index + 1}`} className="router-link-image">
                                 <img src={`${newsImgUrl}${singleNews.image_name}`}/>
                             </Link>
 
@@ -50,14 +59,14 @@ const NewsPerPage = (props) => {
                                         <>
                                             <h4 className="news-information-title">{singleNews.title_bg}</h4>
                                             <p className="news-information-short-description">{singleNews.short_description_bg}</p>
-                                            <Link className="news-information-link" to="#">Прочети ></Link>
+                                            <Link className="news-information-link" to="/bg/single-news">Прочети ></Link>
                                         </>
                                     ) :
                                     (
                                         <>
                                             <h4 className="news-information-title">{singleNews.title_en}</h4>
                                             <p className="news-information-short-description">{singleNews.short_description_en}</p>
-                                            <Link className="news-information-link" to="#">Read ></Link>
+                                            <Link className="news-information-link">Read ></Link>
                                         </>
                                     )
                                 }
@@ -67,6 +76,7 @@ const NewsPerPage = (props) => {
                 })
             }
 
+            <Pagination postsPerPage={postsPerPage} totalPosts={newsData.length} paginate={(pageNumber) => setCurrentPage(pageNumber)}/>
         </NewsPerPageCnt>
     )
 };
