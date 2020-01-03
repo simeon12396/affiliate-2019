@@ -1,8 +1,7 @@
 import React from 'react';
 
 
-const SingleNews = (props) => {
-    console.log(props)
+const SingleNews = () => {
     return (
         <div>
             hello from single news

@@ -43,10 +43,10 @@ const NewsPerPage = (props) => {
         <NewsPerPageCnt>
             {
                 currentPosts && currentPosts.map((singleNews, index) => {
-                    console.log(index)
+                    console.log(singleNews)
                     return(
                         <SingleNews key={index}>
-                            <Link to={`/bg/news${index + 1}`} className="router-link-image">
+                            <Link to={`/bg/news${singleNews.id}`} className="router-link-image">
                                 <img src={`${newsImgUrl}${singleNews.image_name}`}/>
                             </Link>
 
@@ -59,14 +59,14 @@ const NewsPerPage = (props) => {
                                         <>
                                             <h4 className="news-information-title">{singleNews.title_bg}</h4>
                                             <p className="news-information-short-description">{singleNews.short_description_bg}</p>
-                                            <Link className="news-information-link" to="/bg/single-news">Прочети ></Link>
+                                            <Link className="news-information-link" to={`/bg/news${index + 1}`}>Прочети ></Link>
                                         </>
                                     ) :
                                     (
                                         <>
                                             <h4 className="news-information-title">{singleNews.title_en}</h4>
                                             <p className="news-information-short-description">{singleNews.short_description_en}</p>
-                                            <Link className="news-information-link">Read ></Link>
+                                            <Link className="news-information-link" to={`/bg/news${singleNews.id}`}>Read ></Link>
                                         </>
                                     )
                                 }
