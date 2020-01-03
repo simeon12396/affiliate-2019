@@ -23,6 +23,8 @@ const NewsPerPage = (props) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(4);
     
+    localStorage.setItem('newsData', JSON.stringify(newsData));
+
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = newsData.slice(indexOfFirstPost, indexOfLastPost);
@@ -59,7 +61,7 @@ const NewsPerPage = (props) => {
                                         <>
                                             <h4 className="news-information-title">{singleNews.title_bg}</h4>
                                             <p className="news-information-short-description">{singleNews.short_description_bg}</p>
-                                            <Link className="news-information-link" to={`/bg/news${index + 1}`}>Прочети ></Link>
+                                            <Link className="news-information-link" to={`/bg/news${singleNews.id}`}>Прочети ></Link>
                                         </>
                                     ) :
                                     (
