@@ -34,7 +34,8 @@ const SingleNews = (props) => {
     const isOpen = (src) => {
         setVisible(true);
         setCurrentlyImgSrc(src);
-    }
+    };
+
     const sliderSettings = {
         dots: false,
         fade: false,
@@ -45,6 +46,9 @@ const SingleNews = (props) => {
         autoplay: false,
         pauseOnHover: false
       };
+
+      const latestThreeNews = getNewsFromLS.slice(0, 3);
+      console.log(latestThreeNews)
 
     return (
         <>
@@ -105,6 +109,7 @@ const SingleNews = (props) => {
                                             visible={visible}
                                             onClose={() => { setVisible(false) } }
                                             images={[{src: currentlyImgSrc}]}
+                                            downloadable = {false}
                                         />
                             
                                         <p dangerouslySetInnerHTML={{__html: singleNews.description_bg}} />
@@ -133,9 +138,20 @@ const SingleNews = (props) => {
                                         </div>
                                     </div>
 
-                                    <div className="single-news-latest col-md-3">
-                                        <span>dadsladasldasldal</span>
-                                    </div>
+                                    <section className="col-md-3 mb-5" >
+                                        {
+                                            latestThreeNews.map((news, index) => {
+                                                return(
+                                                    <Link to={`/bg/news${news.id}`} className="latest-news-sidebar" key={index}>
+                                                        <div className="latest-news">
+                                                            <span className="latest-news-date">{news.date}</span>
+                                                            <h4 className="latest-news-heading">{news.title_bg}</h4>
+                                                        </div>
+                                                    </Link>
+                                                )
+                                            })
+                                        }
+                                    </section>
                                 </section>
                             </SingleNewsWrapper>
                         )

@@ -176,6 +176,25 @@ export const SingleNewsWrapper = styled.section`
         }
     }
 
-    .single-news-latest {
+    .latest-news-sidebar {
+        text-decoration: none;
+        color: #212121;
     }
+
+    .latest-news {
+        border-bottom: solid 1px #cc2027;
+
+        &-date {
+            font-size: 13px;
+            color: #cc2027;
+            font-weight: 600;
+        }
+
+        &-heading {
+            margin: 5px 0 10px;
+            font-size: 14px;
+            line-height: 1.1;
+        }
+    }
+
 `;
