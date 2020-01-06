@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 
 export const SingleNewsWrapper = styled.section`
+    @media(max-width: 767px) {
+        .breadcrumb {
+            justify-content: flex-start;
+
+            .breadcrumb-item:last-of-type {
+                width: 160px;
+            }
+        }
+    }
+
     .single-news-date {
         border-bottom: solid 1px #cc2027;
         padding: 3px 0;
@@ -82,6 +92,10 @@ export const SingleNewsWrapper = styled.section`
         @media(max-width: 991px) {
             font-size: 22px;
             max-width: 500px;
+        }
+
+        @media(max-width: 767px) {
+            font-size: 18px;
         }
     }
 

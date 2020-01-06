@@ -33,7 +33,7 @@ const FAQ = () => {
 
                     <Breadcrumb.Item href="/bg/information">Информация</Breadcrumb.Item>
 
-                    <Breadcrumb.Item>Често задавани въпроси</Breadcrumb.Item>
+                    <Breadcrumb.Item>Чести въпроси</Breadcrumb.Item>
                 </Breadcrumb>
             </BreadcrumbWrapper>
 
