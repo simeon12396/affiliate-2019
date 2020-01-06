@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 /** STYLED COMPONENTS */
@@ -18,6 +18,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+/** Image viewer */
+import Viewer from 'react-viewer';
+
 const SingleNews = (props) => {
     const getNewsFromLS = JSON.parse(localStorage.getItem('newsData'));
     const currentNewsID = props.match.params.id;
@@ -25,6 +28,13 @@ const SingleNews = (props) => {
     const newsImgUrl = "https://dev.winbet-bg.com/uploads/images/news/";
     const newsSliderImg = "https://dev.winbet-bg.com/uploads/images/newsImages/";
 
+    const [ visible, setVisible ] = useState(false);
+    const [ currentlyImgSrc, setCurrentlyImgSrc ] = useState('');
+
+    const isOpen = (src) => {
+        setVisible(true);
+        setCurrentlyImgSrc(src);
+    }
     const sliderSettings = {
         dots: false,
         fade: false,
@@ -36,7 +46,6 @@ const SingleNews = (props) => {
         pauseOnHover: false
       };
 
-    console.log(getNewsFromLS)
     return (
         <>
             {
@@ -90,8 +99,14 @@ const SingleNews = (props) => {
 
                                 <section className="single-news-details row">
                                     <div className="single-news-content col-md-9">
-                                        <img src={`${newsImgUrl}${singleNews.image_name}`} className="general-img" />
+                                        <img src={`${newsImgUrl}${singleNews.image_name}`} className="general-img" onClick={ (e) => isOpen(e.target.src)}/>
 
+                                        <Viewer
+                                            visible={visible}
+                                            onClose={() => { setVisible(false) } }
+                                            images={[{src: currentlyImgSrc}]}
+                                        />
+                            
                                         <p dangerouslySetInnerHTML={{__html: singleNews.description_bg}} />
 
                                         <Slider {...sliderSettings}>
@@ -101,7 +116,7 @@ const SingleNews = (props) => {
                                                     singleNews.photos.map( photo => {
                                                         return(
                                                             <div className="slide">
-                                                                <img src={`${newsSliderImg}${photo}`} />
+                                                                <img src={`${newsSliderImg}${photo}`} onClick={ (e) => isOpen(e.target.src)}/>
                                                             </div>
                                                         )
                                                     })
