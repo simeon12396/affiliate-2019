@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 
 /** STYLED COMPONENTS */
@@ -22,16 +22,19 @@ const NewsPerPage = (props) => {
     const [newsData, loading] = useNewsData(props.url);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(4);
+    const { lng } = useContext(languageContext);
     
-    localStorage.setItem('newsData', JSON.stringify(newsData));
+    if(lng === 'bg') {
+        localStorage.setItem('newsData', JSON.stringify(newsData));
+    } else {
+        localStorage.setItem('newsDataEn', JSON.stringify(newsData));
+    }
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = newsData.slice(indexOfFirstPost, indexOfLastPost);
     
     const newsImgUrl = "https://dev.winbet-bg.com/uploads/images/news/";
-
-    const { lng } = useContext(languageContext);
 
     if(loading) {
         return(
@@ -48,9 +51,23 @@ const NewsPerPage = (props) => {
                     console.log(singleNews)
                     return(
                         <SingleNews key={index}>
-                            <Link to={`/bg/news${singleNews.id}`} className="router-link-image">
-                                <img src={`${newsImgUrl}${singleNews.image_name}`}/>
-                            </Link>
+                            {
+                                (lng === 'bg') ? 
+                                (
+                                    <>
+                                        <Link to={`/bg/news${singleNews.id}`} className="router-link-image">
+                                            <img src={`${newsImgUrl}${singleNews.image_name}`}/>
+                                        </Link>
+                                    </>
+                                ):
+                                (
+                                    <>
+                                        <Link to={`/en/news${singleNews.id}`} className="router-link-image">
+                                            <img src={`${newsImgUrl}${singleNews.image_name}`}/>
+                                        </Link>
+                                    </> 
+                                )
+                            }
 
                             <div className="news-information">
                                 <span className="news-information-date">{singleNews.date}</span>

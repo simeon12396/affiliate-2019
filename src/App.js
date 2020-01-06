@@ -26,6 +26,7 @@ import RespBettingEn from './en/views/RespBettingEn';
 import ContactsEn from './en/views/ContactsEn';
 import InformationEn from './en/views/InformationEn';
 import NewsEn from './en/views/NewsEn';
+import SingleNewsEn from './en/views/SingleNewsEn';
 
 /** LAYOUTS */
 import MainLayout from './layouts/MainLayout';
@@ -93,6 +94,8 @@ const App = () => {
                     <Route exact path="/:lng/information" component={InformationEn} />
 
                     <Route exact path="/:lng/news" component={NewsEn} />
+
+                    <Route exact path="/:lng/news:id" component={SingleNewsEn} />
                   </MainLayout>
                 </Switch>
               )

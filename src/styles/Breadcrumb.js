@@ -8,8 +8,8 @@ export const BreadcrumbWrapper = styled.div`
         padding-left: 0;
         padding-right: 0;
 
-        @media(max-width: 576px) {
-            justify-content: flex-start;
+        @media(max-width: 575px) {
+            justify-content: ${props => props.justifyFlexEnd} ? 'flex-end' : 'flex-start';
         }
 
         .breadcrumb-item {

@@ -12,7 +12,7 @@ const Information = () => {
     return(
         <div className="container">
             <BreadcrumbWrapper>
-                <Breadcrumb>
+                <Breadcrumb justifyFlexEnd>
                     <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
 
                     <Breadcrumb.Item>Информация</Breadcrumb.Item>

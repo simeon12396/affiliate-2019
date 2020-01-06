@@ -6,7 +6,27 @@ export const SingleNewsWrapper = styled.section`
             justify-content: flex-start;
 
             .breadcrumb-item:last-of-type {
-                width: 160px;
+                width: 70%;
+            }
+        }
+    }
+
+    @media(max-width: 575px) {
+        .breadcrumb {
+            justify-content: flex-start;
+
+            .breadcrumb-item:last-of-type {
+                width: 62%;
+            }
+        }
+    }
+
+    @media(max-width: 375px) {
+        .breadcrumb {
+            justify-content: flex-start;
+
+            .breadcrumb-item:last-of-type {
+                width: 50%;
             }
         }
     }
