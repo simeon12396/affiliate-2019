@@ -18,6 +18,9 @@ import Modal from 'react-bootstrap/Modal';
 /** CONTEXTS */
 import { languageContext } from '../contexts/languageContext';
 
+/** JQUERY IMPORT */
+import $ from "jquery";
+
 const ContactUs = () => {
     const { register, handleSubmit, errors } = useForm();
     
@@ -28,7 +31,7 @@ const ContactUs = () => {
         handleShow();
         e.target.reset();
 
-        fetch('https://dev.winbet-bg.com/api/contacts/create', {
+        /*fetch('https://dev.winbet-bg.com/api/contacts/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +44,15 @@ const ContactUs = () => {
                 description: data.description
             })
         })
-        .then(data => console.log(data.json()))
+        .then(response => response.json())
+        .then(data => console.log(data)) */
+
+        $.post( "https://dev.winbet-bg.com/api/contacts/create", {
+            email: data.email,
+            name: data.name,
+            title: data.title,
+            description: data.description
+        });
     };
 
     const [show, setShow] = useState(false);

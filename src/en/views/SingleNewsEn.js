@@ -30,6 +30,22 @@ const SingleNews = (props) => {
     const [ visible, setVisible ] = useState(false);
     const [ currentlyImgSrc, setCurrentlyImgSrc ] = useState('');
 
+    const changePreviousNews = (actualId, length) => {
+        if(actualId > 1) {
+            props.history.replace(`/bg/news${actualId - 1}`);
+        } else {
+            props.history.replace(`/bg/news${length}`)
+        }
+    };
+
+    const changeNextNews = (actualId, length) => {
+        if(actualId < length) {
+            props.history.replace(`/bg/news${actualId + 1}`);
+        } else {
+            props.history.replace(`/bg/news1`);
+        }
+    };
+
     const isOpen = (src) => {
         setVisible(true);
         setCurrentlyImgSrc(src);
@@ -71,9 +87,9 @@ const SingleNews = (props) => {
 
                                 <div className="single-news-navigation">
                                     <div className="single-news-buttons">
-                                        <Link to="#">{`< Back`}</Link>
+                                        <Link to="#" onClick={() => changePreviousNews(singleNews.actualId, getNewsFromLS.length)}>{`< Back`}</Link>
 
-                                        <Link to="#">{`Next >`}</Link>
+                                        <Link to="#" onClick={() => changeNextNews(singleNews.actualId, getNewsFromLS.length)}>{`Next >`}</Link>
                                     </div>
 
                                     <div className="single-news-social-media">
