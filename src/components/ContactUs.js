@@ -27,6 +27,21 @@ const ContactUs = () => {
         e.preventDefault();
         handleShow();
         e.target.reset();
+
+        fetch('https://dev.winbet-bg.com/api/contacts/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin':'*'
+            },
+            body: JSON.stringify({
+                email: data.email,
+                name: data.name,
+                title: data.title,
+                description: data.description
+            })
+        })
+        .then(data => console.log(data.json()))
     };
 
     const [show, setShow] = useState(false);

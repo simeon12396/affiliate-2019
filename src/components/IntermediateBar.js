@@ -31,7 +31,23 @@ const IntermediateBar = () => {
 
     return(
         <IntermediateBarWrapper className="intermediate-bar">
-            <img src={require('../images/winbet-logo.png')} alt="Winbet Logo" />
+            {
+                (lng === 'bg') ?
+                (
+                    <>
+                        <Link to="/bg">
+                            <img src={require('../images/winbet-logo.png')} alt="Winbet Logo" />
+                        </Link>
+                    </>
+                ) :
+                (
+                    <>
+                        <Link to="/en">
+                            <img src={require('../images/winbet-logo.png')} alt="Winbet Logo" />
+                        </Link>
+                    </>
+                )
+            }
 
             {
                 (lng === 'bg') ?

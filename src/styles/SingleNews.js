@@ -78,26 +78,28 @@ export const SingleNewsWrapper = styled.section`
         display: flex;
         align-items: flex-start;
         
-        a {
-            height: 27px;
-            width: 27px;
-            font-size: 17px;
-            margin: 0 3px;
-            background-color: #cc2027;
+        button {
+            margin-right: 3px;
+
+            @media(max-width: 575px) {
+                margin-right: 0;
+            }
             
-            svg {
-                color: white;
-            }
+            circle {
+                fill: #cc2027;
+                transition: all .1s linear;
 
-            &:hover {
-                background-color: #a31a20;
-            }
-        }
+                &:hover {
+                    fill: #a31a20;
+                    opacity: .7;
+                }
 
-        @media(max-width: 575px) {
-            a {
-                width: 25px;
-                height: 25px;
+                @media(max-width: 575px) {
+                    cx: 31;
+                    cy: 31;
+                    r: 27;
+                    }      
+                }
             }
         }
     }

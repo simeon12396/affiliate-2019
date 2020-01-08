@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
 
 /** STYLED COMPONENTS */
 import { BreadcrumbWrapper } from '../../styles/Breadcrumb';
@@ -9,10 +9,6 @@ import { SingleNewsWrapper } from '../../styles/SingleNews';
 /** REACT BOOTSTRAP */
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
-/** FONT AWESOME */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faViber, faGoogle, faTwitter } from "@fortawesome/free-brands-svg-icons";
-
 /** SLICK SLIDER PLUGIN */
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -21,15 +17,38 @@ import "slick-carousel/slick/slick-theme.css";
 /** Image viewer */
 import Viewer from 'react-viewer';
 
-const SingleNews = (props) => {
-    const getNewsFromLS = JSON.parse(localStorage.getItem('newsData'));
-    const currentNewsID = props.match.params.id;
+/** SOCIAL ICONS SHARE */
+import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, ViberShareButton, ViberIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
 
+const SingleNews = (props) => {
+
+    const getNewsFromLS = JSON.parse(localStorage.getItem('newsData'));
+
+    const paramsId = props.match.params.id;
+    
     const newsImgUrl = "https://dev.winbet-bg.com/uploads/images/news/";
+
     const newsSliderImg = "https://dev.winbet-bg.com/uploads/images/newsImages/";
 
     const [ visible, setVisible ] = useState(false);
+
     const [ currentlyImgSrc, setCurrentlyImgSrc ] = useState('');
+
+    const changePreviousNews = (actualId, length) => {
+        if(actualId > 1) {
+            props.history.replace(`/bg/news${actualId - 1}`);
+        } else {
+            props.history.replace(`/bg/news${length}`)
+        }
+    };
+
+    const changeNextNews = (actualId, length) => {
+        if(actualId < length) {
+            props.history.replace(`/bg/news${actualId + 1}`);
+        } else {
+            props.history.replace(`/bg/news1`);
+        }
+    };
 
     const isOpen = (src) => {
         setVisible(true);
@@ -48,15 +67,14 @@ const SingleNews = (props) => {
       };
 
       const latestThreeNews = getNewsFromLS.slice(0, 3);
-      console.log(latestThreeNews)
 
     return (
         <>
             {
                 getNewsFromLS.map(singleNews => {
-                    if(singleNews.id === currentNewsID) {
+                    if(singleNews.actualId == paramsId) {
                         return (
-                            <SingleNewsWrapper key={singleNews.id} className="container">
+                            <SingleNewsWrapper key={singleNews.actualId} className="container">
                                 <BreadcrumbWrapper>
                                     <Breadcrumb>
                                         <Breadcrumb.Item href="/bg">Начало</Breadcrumb.Item>
@@ -73,27 +91,27 @@ const SingleNews = (props) => {
 
                                 <div className="single-news-navigation">
                                     <div className="single-news-buttons">
-                                        <Link to="#">{`< Обратно`}</Link>
+                                        <Link to="#" onClick={() => changePreviousNews(singleNews.actualId, getNewsFromLS.length)}>{`< Обратно`}</Link>
 
-                                        <Link to="#">{`Следваща >`}</Link>
+                                        <Link to="#" onClick={() => changeNextNews(singleNews.actualId, getNewsFromLS.length)}>{`Следваща >`}</Link>
                                     </div>
 
                                     <div className="single-news-social-media">
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faFacebookF} />
-                                       </SocialButtons>
+                                        <FacebookShareButton url="https://www.facebook.com/winbet.bg.online/">
+                                            <FacebookIcon size={32}round />
+                                        </FacebookShareButton>
 
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faTwitter} />
-                                       </SocialButtons>
+                                        <TwitterShareButton url="https://twitter.com/dwinbet">
+                                            <TwitterIcon size={32}round />
+                                        </TwitterShareButton>
 
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faViber} />
-                                       </SocialButtons>
+                                        <ViberShareButton url="https://twitter.com/dwinbet">
+                                            <ViberIcon size={32}round />
+                                        </ViberShareButton>
 
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faGoogle} />
-                                       </SocialButtons>
+                                        <LinkedinShareButton url="https://www.linkedin.com/company/casino-solutions-ltd/">
+                                            <LinkedinIcon size={32}round />
+                                        </LinkedinShareButton>
                                     </div>
                                 </div>
 
@@ -118,9 +136,9 @@ const SingleNews = (props) => {
                                             {
                                                 (singleNews.photos[0] !== "") ?
                                                 (
-                                                    singleNews.photos.map( photo => {
+                                                    singleNews.photos.map( (photo, index) => {
                                                         return(
-                                                            <div className="slide">
+                                                            <div className="slide" key={index}>
                                                                 <img src={`${newsSliderImg}${photo}`} onClick={ (e) => isOpen(e.target.src)}/>
                                                             </div>
                                                         )
@@ -142,7 +160,7 @@ const SingleNews = (props) => {
                                         {
                                             latestThreeNews.map((news, index) => {
                                                 return(
-                                                    <Link to={`/bg/news${news.id}`} className="latest-news-sidebar" key={index}>
+                                                    <Link to={`/bg/news${news.actualId}`} className="latest-news-sidebar" key={index}>
                                                         <div className="latest-news">
                                                             <span className="latest-news-date">{news.date}</span>
                                                             <h4 className="latest-news-heading">{news.title_bg}</h4>

@@ -9,10 +9,6 @@ import { SingleNewsWrapper } from '../../styles/SingleNews';
 /** REACT BOOTSTRAP */
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
-/** FONT AWESOME */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faViber, faGoogle, faTwitter } from "@fortawesome/free-brands-svg-icons";
-
 /** SLICK SLIDER PLUGIN */
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -21,9 +17,12 @@ import "slick-carousel/slick/slick-theme.css";
 /** Image viewer */
 import Viewer from 'react-viewer';
 
+/** SOCIAL ICONS SHARE */
+import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, ViberShareButton, ViberIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
+
 const SingleNews = (props) => {
     const getNewsFromLS = JSON.parse(localStorage.getItem('newsDataEn'));
-    const currentNewsID = props.match.params.id;
+    const paramsId = props.match.params.id;
 
     const newsImgUrl = "https://dev.winbet-bg.com/uploads/images/news/";
     const newsSliderImg = "https://dev.winbet-bg.com/uploads/images/newsImages/";
@@ -48,15 +47,14 @@ const SingleNews = (props) => {
       };
 
       const latestThreeNews = getNewsFromLS.slice(0, 3);
-      console.log(latestThreeNews)
 
     return (
         <>
             {
                 getNewsFromLS.map(singleNews => {
-                    if(singleNews.id === currentNewsID) {
+                    if(singleNews.actualId == paramsId) {
                         return (
-                            <SingleNewsWrapper key={singleNews.id} className="container">
+                            <SingleNewsWrapper key={singleNews.actualId} className="container">
                                 <BreadcrumbWrapper>
                                     <Breadcrumb>
                                         <Breadcrumb.Item href="/en">Home</Breadcrumb.Item>
@@ -79,21 +77,21 @@ const SingleNews = (props) => {
                                     </div>
 
                                     <div className="single-news-social-media">
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faFacebookF} />
-                                       </SocialButtons>
+                                        <FacebookShareButton url="https://www.facebook.com/winbet.bg.online/">
+                                            <FacebookIcon size={32}round />
+                                        </FacebookShareButton>
 
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faTwitter} />
-                                       </SocialButtons>
+                                        <TwitterShareButton url="https://twitter.com/dwinbet">
+                                            <TwitterIcon size={32}round />
+                                        </TwitterShareButton>
 
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faViber} />
-                                       </SocialButtons>
+                                        <ViberShareButton url="https://twitter.com/dwinbet">
+                                            <ViberIcon size={32}round />
+                                        </ViberShareButton>
 
-                                       <SocialButtons>
-                                            <FontAwesomeIcon icon={faGoogle} />
-                                       </SocialButtons>
+                                        <LinkedinShareButton url="https://www.linkedin.com/company/casino-solutions-ltd/">
+                                            <LinkedinIcon size={32}round />
+                                        </LinkedinShareButton>
                                     </div>
                                 </div>
 
@@ -142,7 +140,7 @@ const SingleNews = (props) => {
                                         {
                                             latestThreeNews.map((news, index) => {
                                                 return(
-                                                    <Link to={`/en/news${news.id}`} className="latest-news-sidebar" key={index}>
+                                                    <Link to={`/en/news${news.actualId}`} className="latest-news-sidebar" key={index}>
                                                         <div className="latest-news">
                                                             <span className="latest-news-date">{news.date}</span>
                                                             <h4 className="latest-news-heading">{news.title_en}</h4>

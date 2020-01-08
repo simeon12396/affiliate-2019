@@ -20,19 +20,29 @@ import Pagination from '../components/Pagination';
 const NewsPerPage = (props) => {
 
     const [newsData, loading] = useNewsData(props.url);
+
     const [currentPage, setCurrentPage] = useState(1);
+
     const [postsPerPage] = useState(4);
+
     const { lng } = useContext(languageContext);
+
+    const getNewsArray = [];
+
+    newsData.forEach((item, key) => {
+        const updatedItem = {actualId: key+1, ...item};
+        getNewsArray.push(updatedItem)
+    });
     
     if(lng === 'bg') {
-        localStorage.setItem('newsData', JSON.stringify(newsData));
+        localStorage.setItem('newsData', JSON.stringify(getNewsArray));
     } else {
-        localStorage.setItem('newsDataEn', JSON.stringify(newsData));
+        localStorage.setItem('newsDataEn', JSON.stringify(getNewsArray));
     }
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = newsData.slice(indexOfFirstPost, indexOfLastPost);
+    const currentPosts = getNewsArray.slice(indexOfFirstPost, indexOfLastPost);
     
     const newsImgUrl = "https://dev.winbet-bg.com/uploads/images/news/";
 
@@ -55,14 +65,14 @@ const NewsPerPage = (props) => {
                                 (lng === 'bg') ? 
                                 (
                                     <>
-                                        <Link to={`/bg/news${singleNews.id}`} className="router-link-image">
+                                        <Link to={`/bg/news${singleNews.actualId}`} className="router-link-image">
                                             <img src={`${newsImgUrl}${singleNews.image_name}`}/>
                                         </Link>
                                     </>
                                 ):
                                 (
                                     <>
-                                        <Link to={`/en/news${singleNews.id}`} className="router-link-image">
+                                        <Link to={`/en/news${singleNews.actualId}`} className="router-link-image">
                                             <img src={`${newsImgUrl}${singleNews.image_name}`}/>
                                         </Link>
                                     </> 
@@ -78,14 +88,14 @@ const NewsPerPage = (props) => {
                                         <>
                                             <h4 className="news-information-title">{singleNews.title_bg}</h4>
                                             <p className="news-information-short-description">{singleNews.short_description_bg}</p>
-                                            <Link className="news-information-link" to={`/bg/news${singleNews.id}`}>Прочети ></Link>
+                                            <Link className="news-information-link" to={`/bg/news${singleNews.actualId}`}>Прочети ></Link>
                                         </>
                                     ) :
                                     (
                                         <>
                                             <h4 className="news-information-title">{singleNews.title_en}</h4>
                                             <p className="news-information-short-description">{singleNews.short_description_en}</p>
-                                            <Link className="news-information-link" to={`/bg/news${singleNews.id}`}>Read ></Link>
+                                            <Link className="news-information-link" to={`/bg/news${singleNews.actualId}`}>Read ></Link>
                                         </>
                                     )
                                 }
