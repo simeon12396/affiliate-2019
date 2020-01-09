@@ -31,7 +31,14 @@ const ContactUs = () => {
         handleShow();
         e.target.reset();
 
-        /*fetch('https://dev.winbet-bg.com/api/contacts/create', {
+        /**$.post( "https://dev.winbet-bg.com/api/contacts/create", {
+            email: data.email,
+            name: data.name,
+            title: data.title,
+            description: data.description
+        }); */
+
+        fetch('https://dev.winbet-bg.com/api/contacts/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -45,14 +52,7 @@ const ContactUs = () => {
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data)) */
-
-        $.post( "https://dev.winbet-bg.com/api/contacts/create", {
-            email: data.email,
-            name: data.name,
-            title: data.title,
-            description: data.description
-        });
+        .then(data => console.log(data)) 
     };
 
     const [show, setShow] = useState(false);
