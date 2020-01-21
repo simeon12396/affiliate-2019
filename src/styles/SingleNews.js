@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const SingleNewsWrapper = styled.section`
+    .react-viewer-toolbar li:nth-of-type(3) {
+        display: none;
+    }
+
     @media(max-width: 767px) {
         .breadcrumb {
             justify-content: flex-start;
@@ -130,7 +134,6 @@ export const SingleNewsWrapper = styled.section`
     }
 
     .single-news-content {
-
         .general-img {
             width: 100%;
             margin-bottom: 35px;

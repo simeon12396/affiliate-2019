@@ -128,6 +128,7 @@ const SingleNews = (props) => {
                                             onClose={() => { setVisible(false) } }
                                             images={[{src: currentlyImgSrc}]}
                                             downloadable = {false}
+                                            changeable={false}
                                         />
                             
                                         <p dangerouslySetInnerHTML={{__html: singleNews.description_bg}} />

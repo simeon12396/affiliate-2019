@@ -30,7 +30,7 @@ export const ButtonsContainer = styled.div`
     display: flex;
     align-items: flex-start;
 
-    button,
+    .login-reference,
     a {
         border: none;
         outline: none;
@@ -43,7 +43,7 @@ export const ButtonsContainer = styled.div`
         box-shadow: 3px 2px 0 rgba(0, 0, 0, 0.5);
     }
 
-    button {    
+    .login-reference {    
         width: 100px;
         background-color: #5c9731;
         margin-right: 10px;

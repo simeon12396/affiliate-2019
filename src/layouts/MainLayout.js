@@ -12,6 +12,7 @@ const MainLayout = (props) => {
                 {props.children}
 
             <Cookies />
+            
             <Footer />
         </div>
     );

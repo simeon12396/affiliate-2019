@@ -28,6 +28,7 @@ const IntermediateBar = () => {
     const handleShow = () => setShow(true);
     
     const registerUrl = 'https://affiliates.winbetaffiliates.bg/signup.php';
+    const loginUrl = 'https://affiliates.winbetaffiliates.bg/signin.php?bare=1';
 
     return(
         <IntermediateBarWrapper className="intermediate-bar">
@@ -55,9 +56,9 @@ const IntermediateBar = () => {
                 (
 
                     <ButtonsContainer>
-                        <button onClick={handleShow}>вход</button>
+                        <a href={loginUrl} className="login-reference" target="_blank" >вход</a>
 
-                        <Modal show={show} onHide={handleClose}>
+                        {/* <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
                                 <Title>Попълнете вашите данни</Title>
                             </Modal.Header>
@@ -71,7 +72,7 @@ const IntermediateBar = () => {
                                     <button>Вход</button>
                                 </Form>
                             </Modal.Body>
-                        </Modal>
+                        </Modal> */}
 
                         <a href={registerUrl} target="_blank" >регистрация</a>
                     </ButtonsContainer>
@@ -79,9 +80,9 @@ const IntermediateBar = () => {
 
                 (
                     <ButtonsContainer>
-                        <button onClick={handleShow}>login</button>
+                        <a href={loginUrl} className="login-reference" target="_blank" >login</a>
 
-                        <Modal show={show} onHide={handleClose}>
+                        {/* <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
                                 <Title>User login</Title>
                             </Modal.Header>
@@ -95,7 +96,7 @@ const IntermediateBar = () => {
                                     <button>Login</button>
                                 </Form>
                             </Modal.Body>
-                        </Modal>
+                        </Modal> */}
 
                         <a href={registerUrl} target="_blank" >registration</a>
                     </ButtonsContainer>
@@ -158,13 +159,13 @@ const IntermediateBar = () => {
                                     </li>
 
                                     <li onClick={handleShow}>
-                                        <a href="#">вход</a>
+                                        <a href={loginUrl} target="_blank">вход</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                         
-                        <Modal show={show} onHide={handleClose}>
+                        {/* <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
                                 <Title>Попълнете вашите данни</Title>
                             </Modal.Header>
@@ -178,7 +179,7 @@ const IntermediateBar = () => {
                                     <button>Вход</button>
                                 </Form>
                             </Modal.Body>
-                        </Modal>
+                        </Modal> */}
                     </MobileMenu>
                 ) :
 
@@ -234,13 +235,13 @@ const IntermediateBar = () => {
                                     </li>
 
                                     <li onClick={handleShow}>
-                                        <a href="#">login</a>
+                                        <a href={loginUrl} target="_blank">login</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                         
-                        <Modal show={show} onHide={handleClose}>
+                        {/* <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
                                 <Title>User login</Title>
                             </Modal.Header>
@@ -254,7 +255,7 @@ const IntermediateBar = () => {
                                     <button>Login</button>
                                 </Form>
                             </Modal.Body>
-                        </Modal>
+                        </Modal> */}
                     </MobileMenu>
                 )
             }
