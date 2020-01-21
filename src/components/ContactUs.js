@@ -31,12 +31,12 @@ const ContactUs = () => {
         handleShow();
         e.target.reset();
 
-        /**$.post( "https://dev.winbet-bg.com/api/contacts/create", {
-            email: data.email,
-            name: data.name,
-            title: data.title,
-            description: data.description
-        }); */
+        // $.post( "https://dev.winbet-bg.com/api/contacts/create", {
+        //     email: data.email,
+        //     name: data.name,
+        //     title: data.title,
+        //     description: data.description
+        // }); 
 
         fetch('https://dev.winbet-bg.com/api/contacts/create', {
             method: 'POST',
