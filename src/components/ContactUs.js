@@ -18,9 +18,6 @@ import Modal from 'react-bootstrap/Modal';
 /** CONTEXTS */
 import { languageContext } from '../contexts/languageContext';
 
-/** JQUERY IMPORT */
-import $ from "jquery";
-
 const ContactUs = () => {
     const { register, handleSubmit, errors } = useForm();
     
@@ -29,14 +26,7 @@ const ContactUs = () => {
     const onSubmit = (data, e) => {
         e.preventDefault();
         handleShow();
-        e.target.reset();
-
-        // $.post( "https://dev.winbet-bg.com/api/contacts/create", {
-        //     email: data.email,
-        //     name: data.name,
-        //     title: data.title,
-        //     description: data.description
-        // }); 
+        e.target.reset(); 
 
         fetch('https://dev.winbet-bg.com/api/contacts/create', {
             method: 'POST',
